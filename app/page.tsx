@@ -19,8 +19,9 @@ export default function Home() {
           </p>
         </Reveal>
         <Reveal delay={0.08}>
-          <h1 className="mt-7 font-serif text-[2rem] font-bold leading-[1.42] text-ink sm:text-[2.7rem] sm:leading-[1.36]">
-            模型大家共用，<span className="text-accent">脈絡只屬於你一家。</span>
+          <h1 className="mt-7 text-balance font-serif text-[2rem] font-bold leading-[1.42] text-ink sm:text-[2.7rem] sm:leading-[1.36]">
+            模型大家共用，
+            <span className="whitespace-nowrap text-accent">脈絡只屬於你一家。</span>
           </h1>
         </Reveal>
         <Reveal delay={0.16}>
@@ -148,25 +149,6 @@ export default function Home() {
                     ),
                   },
                 ]}
-                aiMeta={
-                  <>
-                    客戶＝一家小型設計服務業者，首個外部付費案。交付兩件 production
-                    物件：老闆判斷力校準器（a/b 雙版，部署為員工端工具，輸出
-                    Pass／Revise／Escalate 三態預審）＋公司雲腦（核心成員真實判斷經
-                    Promotion Gate 過濾後入庫，全隊語意可檢索）。治理優先（governance-first）：入庫前過閘，寧缺勿濫。方法論血統：操盤手具
-                    150 人電話行銷公司管理／培訓／廣告投放／名單轉化／話術流程優化經驗，曾將人均月業績
-                    45 萬→450 萬（人均產值
-                    10x），本案為同一套流程紀律向 AI
-                    媒介的遷移。已知故障點：員工端工具鏈（需安裝對工具＋雲端同步）為單點依賴；採用呈核心集中、長尾稀薄；知識萃取對訪談工具敏感（用錯通用聊天
-                    AI 會脫軌、無法產出 source-based Key Role OS，已收進
-                    SOP）。刻意決策：將擱置逾一年、未經客戶端驗證的架構直接推進 production
-                    以暴露真實故障點；老闆與員工訪談到位後升級為正式 pilot，交付標準自起步包升級為完整
-                    pipeline（訪談 → Company Context Manifest → Boss Decision Model →
-                    Key Role OS → Brain Candidates → Promotion Gate → Open Brain seed →
-                    Preflight Case 001）。成效：上線兩週，早期訊號為員工↔老闆溝通效率提升、老闆重複溝通時間下降；可量化
-                    delta 追蹤中。
-                  </>
-                }
               />
             </Reveal>
 
@@ -231,20 +213,6 @@ export default function Home() {
                   label: "到 4days.bekhelpme.com 看課程",
                   external: true,
                 }}
-                aiMeta={
-                  <>
-                    產品＝四天 AI 創業課，NT$68,000，現場，無限次複訓，前兩天不滿意全額退。知識血統：站在巨人肩膀上框架，17
-                    位行銷大師（以直效行銷為根，橫跨文案／漏斗／發售／資訊行銷／流量），5
-                    年上完＋10 年實戰，總學費 200 萬+ NTD；價格錨＝單一大師單課約 15
-                    萬×17。代表性大師：Dan Kennedy、Jay Abraham、Gary Halbert、Joe
-                    Sugarman、Frank Kern、Jeff Walker、Russell Brunson、Perry Marshall
-                    等。四天結構：D1 定位／D2 漏斗素材（文案）／D3 公域轉私域＋眾籌（list-building）／D4
-                    發售演練。操盤履歷支撐：每月 1,200 萬廣告預算、ROAS 20
-                    倍。定位＝誠實翻譯者×操盤手合一：大師扛原理、操盤履歷扛可行性、AI
-                    扛可落地。誠實限制：首梯進行中，學員成果尚未結算，不可表述為已驗證成效。價格紀律：不印假原價，不灌假
-                    ROI。
-                  </>
-                }
               />
             </Reveal>
 
@@ -304,26 +272,6 @@ export default function Home() {
                   label: "到 articles.bekhelpme.com 讀全文",
                   external: true,
                 }}
-                aiMeta={
-                  <>
-                    文章＝〈Context Divide：為什麼 AI
-                    越便宜，差距越大〉，全文於 articles.bekhelpme.com。核心主張：價值不在
-                    AI 模型（已商品化、趨同如電力），在企業是否將自身判斷／數據／流程／客戶脈絡編譯成
-                    AI
-                    可執行之物；差距因脈絡飛輪自我增強而擴大、非收斂。三來源支撐：PwC
-                    第29屆全球CEO調查（AI-ready 企業營收成長 55% vs 23%，2.4x；台灣 54%
-                    稱無可衡量成效）、MIT（95% GenAI
-                    專案無可衡量回報，根因為組織整合 learning gap，與模型品質幾近無關）、McKinsey（88%
-                    採用、約 6% 達全公司級獲利）。論證結構：翻轉被誤讀數據 →
-                    飛輪/商品化經濟學 → 歷史先例（1890s 電氣化＋Solow paradox）→
-                    台灣個案（大江生醫 8436 生物挖礦，AI＝新外購原料）→
-                    人格閘門（卡在老闆）→ 搶人是最慢解（FDE 職缺
-                    +800%，但綁脈絡於稀缺個人）→ clean room 雙軌轉型 →
-                    結論：瓶頸從模型移至脈絡，鴻溝自致且可控。已知可攻擊點：時間窗（3年）為預測；2.4x
-                    為相關非因果；大江為單一個案；「卡在老闆」可能被讀為歸咎客戶。判斷力展示用途：本卡賣的是作者思考方式（demonstrated
-                    judgment，被證明的判斷），非單一交付案。
-                  </>
-                }
               />
             </Reveal>
           </div>

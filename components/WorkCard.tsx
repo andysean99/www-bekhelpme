@@ -1,5 +1,4 @@
 import type { ReactNode } from "react";
-import AIMeta from "./AIMeta";
 
 export type WorkBlock = { label: string; body: ReactNode };
 
@@ -13,14 +12,12 @@ export default function WorkCard({
   subtitle,
   blocks,
   link,
-  aiMeta,
 }: {
   kicker: string;
   title: string;
   subtitle?: string;
   blocks: WorkBlock[];
   link?: { href: string; label: string; external?: boolean };
-  aiMeta: ReactNode;
 }) {
   return (
     <article className="rounded-2xl border border-rule bg-paper/70 px-6 py-8 shadow-[0_18px_50px_-32px_rgba(34,28,21,0.35)] sm:px-9 sm:py-10">
@@ -61,8 +58,6 @@ export default function WorkCard({
           <span aria-hidden>→</span>
         </a>
       ) : null}
-
-      <AIMeta>{aiMeta}</AIMeta>
     </article>
   );
 }
