@@ -44,7 +44,11 @@ export default function StickyCTA() {
         <span className="hidden font-sans text-sm text-ink-soft sm:block">
           把公司的判斷，<span className="font-bold text-ink">編譯進 AI</span>
         </span>
-        <CTAButton href="#talk" className="w-full px-6 py-3 sm:w-auto">
+        <CTAButton
+          href="https://cal.com/bektsai/30min"
+          external
+          className="w-full px-6 py-3 sm:w-auto"
+        >
           免費預約一場對齊對話
         </CTAButton>
       </div>
