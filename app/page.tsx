@@ -37,7 +37,7 @@ export default function Home() {
         </Reveal>
         <Reveal delay={0.32}>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
-            <CTAButton href={BOOK_URL} external>免費預約一場對齊對話</CTAButton>
+            <CTAButton href={BOOK_URL} external>免費預約一場對齊的對話</CTAButton>
             <a
               href="#work"
               className="font-sans text-sm text-ink-faint underline-offset-4 hover:text-accent hover:underline"
@@ -449,7 +449,7 @@ export default function Home() {
                   不是賣一套你聽不懂的平台，是部署一支為結果負責、會幫你把判斷變成系統的隊伍。<strong>這是我最想跟你談的一條。</strong>
                 </p>
                 <div className="mt-7">
-                  <CTAButton href={BOOK_URL} external>免費預約一場對齊對話</CTAButton>
+                  <CTAButton href={BOOK_URL} external>免費預約一場對齊的對話</CTAButton>
                 </div>
               </div>
             </Reveal>
@@ -471,7 +471,7 @@ export default function Home() {
             寄信給我，或預約一場對齊的對話。
           </p>
           <div className="mt-9 flex justify-center">
-            <CTAButton href={BOOK_URL} external>免費預約一場對齊對話</CTAButton>
+            <CTAButton href={BOOK_URL} external>免費預約一場對齊的對話</CTAButton>
           </div>
         </Reveal>
       </section>

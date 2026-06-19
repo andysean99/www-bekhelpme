@@ -49,7 +49,7 @@ export default function StickyCTA() {
           external
           className="w-full px-6 py-3 sm:w-auto"
         >
-          免費預約一場對齊對話
+          免費預約一場對齊的對話
         </CTAButton>
       </div>
     </div>
