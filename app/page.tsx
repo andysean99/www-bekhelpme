@@ -468,7 +468,7 @@ export default function Home() {
             該怎麼編譯？
           </h2>
           <p className="mx-auto mt-5 max-w-[34rem] text-[1.0625rem] leading-[1.9] text-ink-soft sm:text-[1.125rem]">
-            寄信給我，或預約一場對齊對話。
+            寄信給我，或預約一場對齊的對話。
           </p>
           <div className="mt-9 flex justify-center">
             <CTAButton href={BOOK_URL} external>免費預約一場對齊對話</CTAButton>

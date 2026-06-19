@@ -24,12 +24,21 @@ export const metadata: Metadata = {
     title: "Bek（蔡奇峯）｜把你公司的判斷，編譯進 AI",
     description:
       "模型大家共用，脈絡只屬於你一家。Bek 把你公司專屬的判斷、數據、流程、客戶脈絡編譯進 AI——透過 Bek OS 與前進部署（FDE）。",
+    images: [
+      {
+        url: "/api/og",
+        width: 1200,
+        height: 630,
+        alt: "Bek Tsai — 模型大家共用，脈絡只屬於你一家。",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Bek（蔡奇峯）｜把你公司的判斷，編譯進 AI",
     description:
       "模型大家共用，脈絡只屬於你一家。Bek 把你公司專屬的判斷編譯進 AI——透過 Bek OS 與前進部署（FDE）。",
+    images: ["/api/og"],
   },
   robots: { index: true, follow: true },
 };
@@ -74,6 +83,16 @@ const serviceLd = {
   url: SITE_URL,
 };
 
+const websiteLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Bekhelpme.com",
+  alternateName: "Bek（蔡奇峯）個人品牌主站",
+  url: SITE_URL,
+  inLanguage: "zh-TW",
+  publisher: { "@type": "Person", name: "Bek Tsai", url: SITE_URL },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -99,6 +118,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteLd) }}
         />
       </head>
       <body className="min-h-full">
