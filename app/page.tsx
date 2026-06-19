@@ -512,6 +512,13 @@ export default function Home() {
             >
               文章 articles.bekhelpme.com
             </a>
+            <span className="mx-2">✦</span>
+            <a
+              href="/bek-open-brain"
+              className="text-ink-soft underline-offset-4 hover:text-accent hover:underline"
+            >
+              Bek Open Brain
+            </a>
           </p>
           <p className="mt-5 font-sans text-xs tracking-wide text-ink-faint">
             © 2026 Bekhelpme.com
