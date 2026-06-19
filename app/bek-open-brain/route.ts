@@ -1,6 +1,48 @@
 import { NextResponse } from "next/server";
 
-const META_TAGS = `<meta name="description" content="Bek Open Brain：治理優先的 AI 記憶層。整理好的資料夾只是地基，我們在上面加一層可以被信任的判斷——來源、信心、有效期與送出前校準。">
+const JSON_LD = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Bek Open Brain｜治理優先的 AI 記憶層",
+  "description": "整理好的資料夾只是地基。Bek Open Brain 在資料夾之上加一層治理：每條知識帶來源、信心、有效期，想影響決策得先過升級閘門（Promotion Gate）。整理 ≠ 可信任。",
+  "url": "https://www.bekhelpme.com/bek-open-brain",
+  "inLanguage": "zh-TW",
+  "datePublished": "2026-06-19",
+  "dateModified": "2026-06-19",
+  "author": {
+    "@type": "Person",
+    "name": "Bek Tsai",
+    "alternateName": ["Bek", "蔡奇峯"],
+    "url": "https://www.bekhelpme.com"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Bek Tsai",
+    "url": "https://www.bekhelpme.com"
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Bekhelpme.com",
+    "url": "https://www.bekhelpme.com"
+  },
+  "about": [
+    { "@type": "Thing", "name": "AI 記憶治理（AI memory governance）" },
+    { "@type": "Thing", "name": "升級閘門（Promotion Gate）" },
+    { "@type": "Thing", "name": "判斷萃取（judgment extraction）" },
+    { "@type": "Thing", "name": "知識有效期（knowledge validity lifecycle）" },
+    { "@type": "Thing", "name": "Bek OS" }
+  ],
+  "mentions": [
+    { "@type": "SoftwareApplication", "name": "Obsidian" },
+    { "@type": "SoftwareApplication", "name": "NotebookLM" },
+    { "@type": "Thing", "name": "Google OKF（Open Knowledge Format）" },
+    { "@type": "Thing", "name": "PARA method" }
+  ],
+  "keywords": "Bek Open Brain, AI 記憶層, 治理優先, Promotion Gate, 升級閘門, 判斷萃取, Bek OS, governance-first AI memory"
+});
+
+const META_TAGS = `<script type="application/ld+json">${JSON_LD}</script>
+  <meta name="description" content="Bek Open Brain：治理優先的 AI 記憶層。整理好的資料夾只是地基，我們在上面加一層可以被信任的判斷——來源、信心、有效期與送出前校準。">
   <meta property="og:title" content="Bek Open Brain｜治理優先的 AI 記憶層">
   <meta property="og:description" content="整理 ≠ 可信任。我們在資料夾地基上，多加一層可以被信任的判斷。">
   <meta property="og:type" content="website">
@@ -789,7 +831,17 @@ const BASE_HTML = `<!DOCTYPE html>
 </body>
 </html>`;
 
-const HTML = BASE_HTML.replace("</head>", `\n  ${META_TAGS}\n</head>`);
+const GA_SNIPPET = `<script async src="https://www.googletagmanager.com/gtag/js?id=G-NLVESXBBMR"></script>
+  <script>
+    window.dataLayer=window.dataLayer||[];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js',new Date());
+    gtag('config','G-NLVESXBBMR');
+  </script>`;
+
+const HTML = BASE_HTML
+  .replace("</head>", `\n  ${META_TAGS}\n</head>`)
+  .replace("</body>", `\n${GA_SNIPPET}\n</body>`);
 
 export async function GET() {
   return new NextResponse(HTML, {
