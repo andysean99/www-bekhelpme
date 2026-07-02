@@ -395,7 +395,7 @@ const BASE_HTML = `<!DOCTYPE html>
       <span class="seal-mark">腦</span>
       <span>Bek Open Brain<small>治理優先的 AI 記憶層</small></span>
     </div>
-    <div class="bar-tag">治理優先 · 可信任的記憶</div>
+    <div class="bar-tag"><a href="/open_brain_demo1" style="color:var(--seal);text-decoration:none;font-weight:700">看營運掃描實錄 &rarr;</a></div>
   </div>
 </header>
 
@@ -404,6 +404,8 @@ const BASE_HTML = `<!DOCTYPE html>
   <h1>整理好的資料夾，是最好的地基。<br>但地基，還不是<span class="q">可以信任的大腦</span>。</h1>
   <p class="lede">把思考整理成乾淨的資料夾與純文字（markdown），是現在最耐久、CP 最高、跨平台、又不被任何平台綁架的做法——這點我們完全同意，<b>Bek Open Brain 自己就建在資料夾之上</b>。但整理得再整齊，也只是「找得到」。它不會告訴 AI：這一條還算不算數、出自誰的判斷、能不能拿來下決策。<b>整理 ≠ 可信任。</b>我們補的，正是那一層。</p>
   <div class="posline">同樣的資料夾地基，差在有沒有治理那一層。</div>
+  <p style="margin-top:14px;color:#3B3F46;font-size:15px">治理，說白了就是三個問題：這條是誰說的？多可信？還算不算數？</p>
+  <p style="margin-top:22px"><a href="/open_brain_demo1" style="color:var(--seal);font-weight:700;font-size:16px;text-decoration:none;border-bottom:2px solid var(--seal);padding-bottom:4px">&rarr; 先別聽我們說。看它替一家八人公司跑一次雙週營運掃描（已匿名，3 分鐘）</a></p>
 </div>
 
 <section class="wrap reveal">
@@ -484,6 +486,7 @@ const BASE_HTML = `<!DOCTYPE html>
     <span class="eyebrow">核心機制</span>
     <h2>一條記憶要能影響決策，必須先通過閘門</h2>
     <p class="sub">這道升級閘門（Promotion Gate），是 Bek Open Brain 與「乾淨資料夾」最根本的差別。原始證據不會因為被放進整齊的資料夾，就變成可信任的記憶——它得先被檢查、標記、核可。</p>
+    <p class="sub" style="margin-top:14px">白話版：升級閘門就像公司的簽核章。一條資訊進來，先被問三個問題——誰說的？多可信？還算不算數？——蓋了章，才准拿去影響決策。沒蓋章的，AI 看得到，但不敢替你用。</p>
 
     <div class="lanes">
       <div class="lane gov">
@@ -611,6 +614,7 @@ const BASE_HTML = `<!DOCTYPE html>
       </tbody>
     </table>
   </div>
+  <p style="margin-top:6px;font-size:13.5px;color:var(--steel);max-width:760px">說句公道話：表上這些工具沒有一個做錯——它們的目標本來就不是治理。筆記工具負責記、AI 負責答，都做得很好；公司雲腦補的是中間那一段：確保 AI 拿到的每一條，是還算數、有人負責的知識。</p>
   <div class="legend">
     <span><i class="full"></i> ● 完整支援</span>
     <span><i class="part"></i> ◐ 部分支援</span>
@@ -678,6 +682,7 @@ const BASE_HTML = `<!DOCTYPE html>
     <span class="eyebrow">對老闆的意義</span>
     <h2>讓員工在打擾你之前，AI 先幫你校準一次</h2>
     <p>這套系統最直接的用途，不是「幫公司整理更多資料夾」，而是一道送到你桌上之前的預審關卡。員工要把報價、提案、客戶回覆、交付物送出前，AI 先依你的判斷標準檢查一次，給出三種結果——你被打擾的次數變少，送到你面前的東西品質變高。</p>
+    <p style="margin-top:20px;color:#33373E">這不是想像圖。我們把一場真實的雙週營運掃描原樣放上來（人名、公司已代稱，金額已模糊）：老闆打一句白話，AI 調出 65 筆有日期、有出處的紀錄，回一張 11 項、可逐項拍板的待決定清單——連兩位創辦人自己是瓶頸，都被紀錄標了出來。 <a href="/open_brain_demo1" style="color:var(--seal);font-weight:700;text-decoration:none">&rarr; 看實錄</a></p>
     <div class="verdict">
       <div class="pass">
         <div class="v-key">通過</div>
@@ -812,9 +817,47 @@ const BASE_HTML = `<!DOCTYPE html>
   </div>
 </section>
 
+<section class="wrap reveal">
+  <div class="sec-head">
+    <span class="eyebrow">三種狀態</span>
+    <h2>你的公司現在是哪一種？</h2>
+    <p>導入 AI 不是「有」或「沒有」的問題，是「AI 拿到的東西能不能信」的問題。三種狀態，誠實講。</p>
+  </div>
+  <div class="twocol" style="grid-template-columns:1fr;gap:16px">
+    <div class="card bad"><h3>狀態一：還沒用 AI，也沒有第二腦 — 知識都在人身上</h3><p>公司靠問人運作。報價怎麼抓、這個客戶要怎麼應對、出事先找誰——答案在老闆和幾個老兵的腦裡。新人上手慢、同一個問題被問第五次、老闆變成全公司的瓶頸：你不在，判斷就停擺。這不是誰的錯，是知識從來沒有離開過人的腦袋。<br><span style="color:var(--steel)">（誠實說：一人公司、或三五個人同桌喊一聲就有答案——你可能還不需要雲腦。先把這頁存起來，等長大再回來。）</span></p></div>
+    <div class="card bad"><h3>狀態二：用了 AI、也建了第二腦，但沒有治理 — 整理得很整齊，卻沒人保證還算數</h3><p>表面上升級了：文件進了 Notion 或 RAG，AI 答得又快又有自信。新的痛也跟著來——AI 撈到去年的報價，照樣自信地報給客戶；資料越存越多，沒人知道哪條過期、哪條只是草稿；而最值錢的老闆判斷，根本不在裡面，因為從來沒人萃取。哪天換工具，整套重建。你不是沒有記憶，你是有一大堆<b>沒人負責的記憶</b>。</p></div>
+    <div class="card good"><h3>狀態三：有 Bek Open Brain — 同一個資料夾地基，多一層治理</h3><p>地基還是資料夾＋純文字：你看得懂、帶得走、不綁任何一家模型。差別在上面那一層——老闆的判斷被萃取進去；每條知識過升級閘門，帶來源、信心、有效期，才算可信；AI 送出前先預審：通過、需修改、或升級給人裁決。狀態一的痛（判斷離不開老闆），萃取解掉；狀態二的痛（記憶沒人負責），閘門解掉。剩下的校準與維護，我們代勞——這是服務，不是丟給你一套軟體。</p></div>
+  </div>
+</section>
+<section class="wrap reveal">
+  <div class="sec-head">
+    <span class="eyebrow">FAQ</span>
+    <h2>老闆真正想問的</h2>
+    <p>這些問題我們被問過很多次。照實答，包括「你可能不需要」的部分。</p>
+  </div>
+  <div class="twocol" style="grid-template-columns:1fr;gap:14px">
+    <div class="card"><h3>我自己用 Obsidian、Notion，ChatGPT 也有記憶了，為什麼還要你？</h3><p>如果只有你一個人用、資料量不大、你自己記得哪些還算數——真的可以，不用買。這些工具解的是「個人記得住」；公司雲腦解的是「多人共用時，誰保證這條還算數」。多的那一層是治理：每條知識帶來源、信心、有效期，AI 用之前先過預審。一人用不到，一群人就差很多。</p></div>
+    <div class="card"><h3>這是不是又一個我得自己維護的系統？</h3><p>不是，這是我們最不一樣的地方之一。含代維護：約每 2–3 個月清理一次、判斷萃取前三個月每月、之後每兩個月，另含有效期複審、信心校準、去重、把你的翻案餵回校準器、版本紀律稽核。地基是可攜資料夾＋純文字——哪天你不續了，整包還是你的。</p></div>
+    <div class="card"><h3>把公司判斷、老闆的腦交出去，安全嗎？會不會外洩？</h3><p>資料在雲端與你的客戶端都有；雙方簽 NDA；我們不會拿你的資料訓練任何模型。至於你接上的 AI（ChatGPT／Claude 等）是否留存或訓練，取決於各家政策，我們會協助你選對設定（例如企業版／關閉訓練）。地基是你看得懂、刪得掉的純文字，不綁單一廠商。</p></div>
+    <div class="card"><h3>要多久看得到效果？我和員工要花多少力氣？</h3><p>導入約一個月。老闆的判斷萃取訪談約 2–3 小時；員工也約 2–3 小時，再加每天用語音記錄工作日誌、持續一到兩週。另外第一個月每週一次、每次一小時的訓練帶你們上手（未來可能做成錄播＋AI 訓練，更省時間）。前期最花的是老闆的時間，因為判斷只有你能給——但那正是這套東西值錢的地方。</p></div>
+    <div class="card"><h3>這是要取代我的員工嗎？</h3><p>不是。它取代的是「同一件事重複教第五次」的時間，不是人。判斷還是人下的——AI 只是把已核可的判斷帶到現場。連員工上報，都是老闆親自處置：存進雲腦、歸檔、或刪除。人一直在迴路裡，而且在上面。</p></div>
+    <div class="card"><h3>跟 RAG、知識圖譜、second brain 到底差在哪？</h3><p>RAG 解「找得到」，不解「還算不算數」——檢索是搜尋問題，治理是信任問題。差在三件事：升級閘門（帶來源、信心、有效期才進可信記憶，RAG 預設「進了就用」）；送出前預審（通過／需修改／升級給人裁決）；判斷萃取（主動挖出老闆沒寫成文件的取捨）。Second brain 是個人的；公司雲腦是公司的、每條有人負責。地基一樣純文字、跨模型——這不是換掉你的 RAG，是給它一層它本來沒有的東西。</p></div>
+    <div class="card"><h3>多少錢？</h3><p>價格先聊再報——適不適合、規模對不對，得先看過才知道。誠實剎車也適用報價：聊完發現你還不需要，我們會直說，這筆錢你留著。</p></div>
+    <div class="card"><h3>公司很小、才幾個人，適合嗎？我不懂技術，能用嗎？</h3><p>不懂技術完全沒問題——地基就是資料夾和純文字，打開像看文件；維護由我們代勞。公司規模才是真正的門檻：如果知識還在幾個人腦裡轉得動、問一聲就有答案，你可能還不需要。開始痛的訊號通常是：新人變多、老闆開始重複回答、或你不在時事情會卡住。</p></div>
+    <div class="card"><h3>AI 會不會亂講、幻覺？你怎麼確保它不亂用資料？</h3><p>不跟你保證 AI 永不亂講——任何人這樣保證都是在騙你。我們能控制的是它拿到什麼、送出什麼：只有過了閘門的知識才進可信記憶；送出前預審會擋下過期、未核可的；答案帶來源，你隨時回查那條是誰核可、什麼時候到期。幻覺沒辦法歸零，但「自信地用錯資料」，是治理管得住的。</p></div>
+    <div class="card"><h3>跟我現在的工具會衝突嗎？要全部搬家嗎？</h3><p>不用搬家。公司 wiki 用 Google Drive 搭 Obsidian vault、上報直接走 LINE——你現在的工具照用。真正進雲腦的只有通過閘門、值得信的知識。</p></div>
+    <div class="card"><h3>哪天你不做了、或我不想續了，怎麼辦？</h3><p>整包帶走。可攜資料夾＋純文字就是為這一天設計的：沒有專屬格式、不綁我們、不綁任何模型廠商。你失去的是代維護與校準這個服務，不是你的腦。老實說，這條該是你挑任何 AI 記憶方案的第一個問題。</p></div>
+    <div class="card"><h3>有沒有保證？</h3><p>沒有花俏的保證，只有一條：裝好、判斷萃取完成、跑出第一份營運掃描後，30 天內你若判斷它對決策沒幫助，退 50%。不用「滿意」這種主觀字眼——用你看得到的交付里程碑。</p></div>
+    <div class="card"><h3>我的產業很特殊，你懂嗎？</h3><p>不假裝懂。你的產業判斷本來就該從你腦裡萃取，不是套模板——我們目前實際做過建築師事務所、陶藝品牌這類設計與專業服務型公司。我們的專業，是把「你的懂」變成 AI 用得動、有人負責的形狀。</p></div>
+  </div>
+</section>
 <section class="close">
   <div class="posline">讓 AI 升級判斷力，讓判斷力升級事業。</div>
   <p class="sub">Bek Open Brain｜建在資料夾之上、為 SME 老闆打造的決策校準與營運脈絡系統</p>
+  <div style="margin-top:30px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+    <a href="/open_brain_demo1" style="background:#E08E7C;color:#15181E;font-weight:700;padding:13px 22px;border-radius:24px;text-decoration:none">看營運掃描實錄</a>
+    <a href="https://cal.com/bektsai/30min" target="_blank" rel="noopener" style="border:1px solid #E08E7C;color:#fff;font-weight:700;padding:13px 22px;border-radius:24px;text-decoration:none">預約 30 分鐘對齊</a>
+  </div>
 </section>
 
 <footer>

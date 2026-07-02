@@ -519,6 +519,13 @@ export default function Home() {
             >
               Bek Open Brain
             </a>
+            <span className="mx-2">✦</span>
+            <a
+              href="/open_brain_demo1"
+              className="text-ink-soft underline-offset-4 hover:text-accent hover:underline"
+            >
+              公司雲腦掃描 Demo
+            </a>
           </p>
           <p className="mt-5 font-sans text-xs tracking-wide text-ink-faint">
             © 2026 Bekhelpme.com
