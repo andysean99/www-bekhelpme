@@ -129,7 +129,21 @@ tr.sum td{font-weight:700;color:var(--deep);background:#EAEEF2}
 .qchip{font-size:13px;color:var(--deep);background:#fff;border:1px solid var(--line);border-radius:20px;padding:7px 14px;text-decoration:none;white-space:nowrap}
 .qchip:hover{border-color:var(--bar);color:var(--bar)}
 .qchip.primary{background:var(--bar);color:#fff;border-color:var(--bar);font-weight:500}.qchip.primary:hover{background:#1B44D6;color:#fff}
+.lb-ov{position:fixed;inset:0;background:rgba(5,28,44,.55);display:none;align-items:center;justify-content:center;z-index:200;padding:20px}
+.lb-ov.open{display:flex}
+.lb{background:#fff;border-radius:16px;max-width:470px;width:100%;padding:26px 26px 24px;position:relative;box-shadow:0 20px 60px rgba(5,28,44,.35)}
+.lb-x{position:absolute;top:10px;right:14px;border:0;background:none;font-size:24px;color:#9AA3AD;cursor:pointer;line-height:1}
+.lb h3{font-size:19px;color:var(--deep);margin:2px 40px 12px 0;line-height:1.5}
+.lb .lb-lead{font-size:14.5px;color:var(--ink);line-height:1.75;margin-bottom:12px}
+.lb ul{margin:0 0 14px;padding-left:18px}.lb li{font-size:14px;color:var(--ink);line-height:1.7;margin:4px 0}
+.lb .lb-note{font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:16px}
+.lb-btn{display:block;text-align:center;background:#2251FF;color:#fff;text-decoration:none;font-weight:700;font-size:15.5px;padding:13px;border-radius:24px}
+.lb-btn:hover{background:#1B44D6}
+.lb-sec{display:block;text-align:center;color:var(--muted);font-size:13px;text-decoration:none;margin-top:12px}
+.lb-sec:hover{color:var(--accent);text-decoration:underline}
 </style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NLVESXBBMR"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NLVESXBBMR');</script>
 </head>
 <body>
 <div class="topbar">
@@ -296,7 +310,7 @@ tr.sum td{font-weight:700;color:var(--deep);background:#EAEEF2}
   <div class="cta-block">
     <div class="cta-h">想幫你的公司做同樣的營運掃描？</div>
     <div class="cta-p">這份示範背後是 Bek OS——把你和關鍵人的判斷、流程與脈絡編譯進 AI，而且這層由我們幫你顧，不是丟工具叫你自己維護。</div>
-    <a class="cta-btn" href="https://cal.com/bektsai/30min" target="_blank" rel="noopener">免費預約一場對齊的對話 →</a>
+    <a class="cta-btn" href="#" onclick="openLB('cta');return false;">免費預約一場對齊的對話 →</a>
     <div style="margin-top:12px"><a class="cta-back" href="https://www.bekhelpme.com/bek-open-brain" style="color:#AFC9FF">想先弄懂它憑什麼敢這樣回答？→ 這是什麼：了解公司雲腦（Open Brain）</a></div>
     <a class="cta-back" href="https://www.bekhelpme.com">← 回 bekhelpme.com 看更多</a>
   </div>
@@ -310,7 +324,7 @@ tr.sum td{font-weight:700;color:var(--deep);background:#EAEEF2}
 <div class="inputbar">
   <div class="ibchips">
     <span class="ib-label">下一步：</span>
-    <a class="qchip" href="https://cal.com/bektsai/30min" target="_blank" rel="noopener">我們公司也能這樣掃嗎？</a>
+    <a class="qchip" href="#" onclick="openLB('chip');return false;">我們公司也能這樣掃嗎？</a>
     <a class="qchip" href="https://www.bekhelpme.com/bek-open-brain">AI 怎麼知道哪條紀錄還算數？</a>
     <a class="qchip primary" href="https://www.bekhelpme.com/bek-open-brain">這是什麼？→ 了解公司雲腦</a>
   </div>
@@ -334,6 +348,33 @@ tr.sum td{font-weight:700;color:var(--deep);background:#EAEEF2}
   }
   document.getElementById('replay').addEventListener('click',play);
   if(!matchMedia('(prefers-reduced-motion: reduce)').matches) play();
+})();
+</script>
+<div class="lb-ov" id="lbov" role="dialog" aria-modal="true" aria-label="預約確認">
+  <div class="lb">
+    <button class="lb-x" id="lbx" aria-label="關閉">×</button>
+    <h3>員工零負擔，老闆每兩週多一雙看穿公司的眼睛</h3>
+    <div class="lb-lead">這份掃描不需要任何人多填報——它讀的是團隊平常就在寫的紀錄，然後從紀錄和紀錄之間的落差，找出你平常看不到的東西。</div>
+    <ul>
+      <li><b>零額外工作量</b>——不多一張表單、不多一套系統，員工照常工作就好</li>
+      <li><b>看見沒說出口的隱藏問題</b>——單點依賴、卡在等人的事、重複耗時的流程，自動浮上來</li>
+      <li><b>持續發掘可以輕易變快的地方</b>——雙週自動掃描，每條發現都能回查來源與日期</li>
+    </ul>
+    <div class="lb-note">誠實說：如果你是一人公司、或 AI 拿錯資料你也賠得起，可能還用不到——聊完我們會直接告訴你。</div>
+    <a class="lb-btn" id="lbbook" href="https://cal.com/bektsai/30min" target="_blank" rel="noopener">免費預約 30 分鐘對齊 →</a>
+    <a class="lb-sec" href="https://www.bekhelpme.com/bek-open-brain">先看 Open Brain 是什麼 →</a>
+  </div>
+</div>
+<script>
+(function(){
+  var ov=document.getElementById('lbov'), x=document.getElementById('lbx'), book=document.getElementById('lbbook');
+  function ev(n,p){ if(window.gtag){try{gtag('event',n,p||{});}catch(e){}} }
+  window.openLB=function(src){ ov.classList.add('open'); ev('demo_book_intent',{source:src||'unknown'}); };
+  function close(){ ov.classList.remove('open'); }
+  x.addEventListener('click',close);
+  ov.addEventListener('click',function(e){ if(e.target===ov) close(); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape') close(); });
+  book.addEventListener('click',function(){ ev('demo_book_click',{}); });
 })();
 </script>
 </body>

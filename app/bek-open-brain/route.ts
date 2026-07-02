@@ -870,6 +870,9 @@ const BASE_HTML = `<!DOCTYPE html>
     es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
   },{threshold:.12});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  (function(){function ev(n,p){if(window.gtag){try{gtag('event',n,p||{});}catch(e){}}}
+  document.querySelectorAll('a[href^="https://cal.com/bektsai"]').forEach(function(a){a.addEventListener('click',function(){ev('ob_book_click',{page:'bek-open-brain'});});});
+  document.querySelectorAll('a[href="/open_brain_demo1"]').forEach(function(a){a.addEventListener('click',function(){ev('ob_to_demo',{page:'bek-open-brain'});});});})();
 </script>
 </body>
 </html>`;
