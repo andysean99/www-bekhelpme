@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Bek OS 公司雲腦營運掃描 Demo：AI 從公司日常紀錄，自動產出管理層級的營運掃描、待決定清單與治理建議。互動示範，資料已匿名。">
+<link rel="canonical" href="https://www.bekhelpme.com/open_brain_demo1">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.bekhelpme.com/open_brain_demo1">
+<meta property="og:title" content="Bek OS 公司雲腦營運掃描 Demo｜bekhelpme.com">
+<meta property="og:description" content="AI 從公司日常紀錄自動產出營運掃描與待決定清單。互動示範，資料已匿名。">
+<meta property="og:site_name" content="bekhelpme.com">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Bek OS 公司雲腦營運掃描 Demo">
+<meta name="twitter:description" content="AI 從公司日常紀錄自動產出營運掃描與待決定清單。互動示範，資料已匿名。">
+<title>Bek OS 公司雲腦營運掃描 Demo｜bekhelpme.com</title>
+<style>
+:root{
+  --deep:#051C2C; --accent:#16337A; --bar:#2251FF; --ink:#1A1A1A; --muted:#5A6570;
+  --line:#E3E8EC; --page:#EEF1F4; --card:#FFFFFF; --keylite:#AFC9FF;
+  --d-bar:#B03A2E; --d-fill:#FBECEA; --d-tx:#8E2A20;
+  --w-bar:#B9770E; --w-fill:#FBF3E6; --w-tx:#7A4E08;
+  --i-bar:#2251FF; --i-fill:#ECF0FF; --i-tx:#16337A;
+  --g-fill:#F1F3F5; --g-tx:#3C4650;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",-apple-system,sans-serif;
+  background:var(--page); color:var(--ink); line-height:1.7; font-size:16px; -webkit-font-smoothing:antialiased;}
+.topbar{position:sticky; top:0; z-index:20; background:var(--deep); color:#fff;
+  padding:12px 20px; display:flex; align-items:center; gap:12px; box-shadow:0 1px 0 rgba(0,0,0,.15);}
+.spark{width:26px;height:26px;border-radius:7px;background:var(--bar);display:flex;
+  align-items:center;justify-content:center;font-weight:700;font-size:15px;color:#fff;flex:0 0 auto}
+.brand{font-weight:700;letter-spacing:.3px}
+.sub{color:#9DB2C4;font-size:13px}
+.tag{margin-left:auto;font-size:12px;color:#B9C6D3;border:1px solid #33475A;padding:3px 10px;border-radius:20px}
+.wrap{max-width:880px;margin:0 auto;padding:26px 18px 130px}
+.day{text-align:center;color:var(--muted);font-size:12.5px;margin:6px 0 20px}
+.day span{background:#E3E8EC;padding:3px 12px;border-radius:20px}
+.turn{margin:0 0 30px}
+.q{display:flex;justify-content:flex-end;margin-bottom:16px}
+.q .bubble{background:var(--deep);color:#fff;border-radius:16px 16px 4px 16px;
+  padding:12px 16px;max-width:80%;font-size:15.5px;line-height:1.6;box-shadow:0 1px 2px rgba(0,0,0,.12)}
+.a{display:flex;gap:12px;align-items:flex-start}
+.a .av{width:30px;height:30px;border-radius:8px;background:var(--bar);flex:0 0 auto;
+  display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:13px;margin-top:2px}
+.a .body{flex:1;min-width:0}
+.who{font-size:12.5px;color:var(--muted);margin:0 0 8px}
+.who b{color:var(--deep)}
+.chip{display:inline-flex;align-items:center;gap:8px;background:var(--i-fill);
+  color:var(--i-tx);font-size:13px;font-weight:500;padding:6px 12px;border-radius:8px;margin-bottom:14px}
+.chip .dot{width:7px;height:7px;border-radius:50%;background:var(--bar)}
+.chip.live .dot{animation:pulse 1.2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:0 0 18px}
+.metric{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.metric .lb{font-size:12.5px;color:var(--muted)}
+.metric .nm{font-size:27px;font-weight:700;color:var(--deep);line-height:1.2}
+.metric .nm small{font-size:14px;font-weight:500;color:var(--muted)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:0 0 16px}
+h4{font-size:16px;margin:2px 0 10px;color:var(--deep)}
+p{margin:0 0 10px}
+.lead b{color:var(--deep)}
+.muted{color:var(--muted);font-size:13.5px}
+table{width:100%;border-collapse:collapse;font-size:14px;margin:2px 0 6px;border-radius:10px;overflow:hidden}
+thead th{background:var(--deep);color:#fff;font-weight:500;text-align:left;padding:9px 11px}
+tbody td{padding:8px 11px;border-bottom:1px solid var(--line);vertical-align:top}
+tbody tr:nth-child(even){background:#F4F7F9}
+td.c,th.c{text-align:center}
+tr.sum td{font-weight:700;color:var(--deep);background:#EAEEF2}
+.callout{border-radius:0 10px 10px 0;padding:11px 15px;margin:12px 0}
+.callout .h{font-weight:700;font-size:14px;margin-bottom:4px;display:flex;gap:7px;align-items:center}
+.callout p{margin:0;font-size:14.5px}
+.callout ul{margin:4px 0 0;padding-left:18px} .callout li{margin:3px 0;font-size:14.5px}
+.danger{background:var(--d-fill);border-left:4px solid var(--d-bar)} .danger .h{color:var(--d-tx)}
+.warn{background:var(--w-fill);border-left:4px solid var(--w-bar)} .warn .h{color:var(--w-tx)}
+.info{background:var(--i-fill);border-left:4px solid var(--i-bar)} .info .h{color:var(--i-tx)}
+.person{border:1px solid var(--line);border-radius:12px;background:var(--card);padding:14px 16px;margin-bottom:12px}
+.person .nmrow{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.person .role{font-weight:700;color:var(--deep);font-size:15px}
+.person .cnt{color:var(--muted);font-size:12.5px;white-space:nowrap}
+.matrix2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:4px 0}
+.quad{border-radius:10px;padding:12px 14px;min-height:172px;font-size:13.5px;line-height:1.65}
+.quad .qh{font-weight:700;font-size:12.5px;margin-bottom:7px;display:inline-block;padding:3px 10px;border-radius:6px}
+.q1{background:var(--d-fill)} .q1 .qh{background:#F3CBC3;color:var(--d-tx)}
+.q2{background:var(--w-fill)} .q2 .qh{background:#F1DDB0;color:var(--w-tx)}
+.q3{background:var(--i-fill)} .q3 .qh{background:#CFDCFF;color:var(--i-tx)}
+.q4{background:var(--g-fill)} .q4 .qh{background:#DDE1E5;color:var(--g-tx)}
+.mech{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:4px}
+.mech .m{background:#F7F9FA;border:1px solid var(--line);border-radius:10px;padding:12px 14px;font-size:13.8px;line-height:1.65}
+.mech .m b{color:var(--deep);display:block;margin-bottom:3px}
+.caps{background:var(--deep);color:#EAF0F6;border-radius:14px;padding:18px 20px;margin-top:8px}
+.caps h4{color:#fff}
+.caps .row{display:flex;gap:12px;align-items:flex-start;margin:11px 0;font-size:14.5px}
+.caps .k{color:var(--keylite);font-weight:700;flex:0 0 88px}
+.inputbar{position:fixed;left:0;right:0;bottom:0;background:rgba(238,241,244,.94);
+  backdrop-filter:blur(6px);border-top:1px solid var(--line);padding:12px 18px}
+.inputbar .box{max-width:880px;margin:0 auto;display:flex;gap:10px;align-items:center;
+  background:#fff;border:1px solid var(--line);border-radius:24px;padding:8px 8px 8px 18px;box-shadow:0 2px 10px rgba(5,28,44,.06)}
+.inputbar input{flex:1;border:0;outline:0;font-size:15px;font-family:inherit;color:var(--ink);background:transparent}
+.inputbar .send{width:38px;height:38px;border-radius:50%;background:var(--bar);border:0;color:#fff;font-size:17px;cursor:pointer;flex:0 0 auto}
+.replay{display:block;margin:6px auto 0;background:none;border:0;color:var(--muted);font-size:12.5px;cursor:pointer;text-decoration:underline}
+.anim .step{opacity:0;transform:translateY(10px);animation:rise .55s ease forwards}
+@keyframes rise{to{opacity:1;transform:none}}
+.foot{text-align:center;color:var(--muted);font-size:12px;margin-top:22px;line-height:1.8}
+@media(max-width:600px){.metrics{grid-template-columns:1fr 1fr}.mech{grid-template-columns:1fr}.matrix2{grid-template-columns:1fr}.quad{min-height:auto}}
+.backlink{color:#AFC9FF;text-decoration:none;font-size:12.5px;margin-left:14px}
+.backlink:hover{text-decoration:underline}
+.cta-block{background:#051C2C;border-radius:16px;padding:26px 24px;margin:26px 0 6px;text-align:center}
+.cta-h{color:#fff;font-size:19px;font-weight:700;margin-bottom:8px}
+.cta-p{color:#C7D4E0;font-size:14.5px;line-height:1.75;max-width:520px;margin:0 auto 16px}
+.cta-btn{display:inline-block;background:#2251FF;color:#fff;text-decoration:none;font-weight:700;
+  font-size:15px;padding:12px 22px;border-radius:24px}
+.cta-btn:hover{background:#1B44D6}
+.cta-back{display:block;color:#9DB2C4;font-size:12.5px;text-decoration:none;margin-top:14px}
+.cta-back:hover{text-decoration:underline}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="spark">B</div>
+  <div><div class="brand">Bek OS</div></div>
+  <div class="sub">公司雲腦 · 營運掃描</div>
+  <a class="backlink" href="https://www.bekhelpme.com">← 回 bekhelpme.com</a>
+  <div class="tag" style="margin-left:0">示範資料 · 已匿名</div>
+</div>
+
+<div class="wrap" id="wrap">
+  <div class="day"><span>示範情境：約 8 人規模的設計整合企業（D 公司）· 某雙週 14 天</span></div>
+
+  <!-- TURN 1 -->
+  <div class="turn">
+    <div class="q step"><div class="bubble">查一下這兩週每個人在公司雲腦存了幾筆、上報幾筆，統計一下。</div></div>
+    <div class="a step"><div class="av">B</div><div class="body">
+      <div class="who"><b>Bek OS</b> · 直接從公司雲腦讀出來，不必任何人另外填報</div>
+      <div class="chip live"><span class="dot"></span><span>掃描公司雲腦 · 65 筆 · 8 位成員 · 14 天</span></div>
+      <div class="metrics">
+        <div class="metric"><div class="lb">總筆數</div><div class="nm" data-n="65">65</div></div>
+        <div class="metric"><div class="lb">上報的事</div><div class="nm" data-n="23">23</div></div>
+        <div class="metric"><div class="lb">重複的紀錄</div><div class="nm" data-n="15">15<small>+</small></div></div>
+      </div>
+      <div class="card">
+        <table>
+          <thead><tr><th>成員</th><th class="c">總筆數</th><th class="c">其中上報</th><th>主要內容</th></tr></thead>
+          <tbody>
+            <tr><td>專案經理 M</td><td class="c">28</td><td class="c">7</td><td>美術館寄售、通路夥伴 S、品牌官網、營運分析、見學團、選品採購</td></tr>
+            <tr><td>財務主管 F</td><td class="c">15</td><td class="c">12</td><td>薪酬分潤制度、財會職能盤點、政府補助案定稿</td></tr>
+            <tr><td>創辦人 A</td><td class="c">8</td><td class="c">0</td><td>產品線渲染標準、品牌影片、設計規範</td></tr>
+            <tr><td>資深設計 K</td><td class="c">4</td><td class="c">0</td><td>四個設計案的進度更新</td></tr>
+            <tr><td>行銷企劃 C</td><td class="c">4</td><td class="c">2</td><td>行銷會議摘要、電商專區優化</td></tr>
+            <tr><td>工務設計 W</td><td class="c">3</td><td class="c">2</td><td>工作日誌、工地品質管控討論</td></tr>
+            <tr><td>設計研究 R</td><td class="c">2</td><td class="c">0</td><td>產品配置器網站設計研究</td></tr>
+            <tr><td>創辦人 B</td><td class="c">1</td><td class="c">0</td><td>專案全流程 SOP 設計</td></tr>
+            <tr class="sum"><td>合計</td><td class="c">65</td><td class="c">23</td><td></td></tr>
+          </tbody>
+        </table>
+        <p class="muted">「上報」目前只有少數 4 人在用；兩位創辦人和另外兩位這兩週都沒用到——這個功能還沒真正推開。</p>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- TURN 2 -->
+  <div class="turn">
+    <div class="q step"><div class="bubble">分析每個人存的資料，有什麼看得到的問題、和沒說出來的隱藏問題？深入一點。</div></div>
+    <div class="a step"><div class="av">B</div><div class="body">
+      <div class="who"><b>Bek OS</b> · 比對 8 位成員的紀錄型態，找出卡點與風險</div>
+      <div class="chip"><span class="dot"></span>分析紀錄型態 · 偵測重複與「只靠一個人」的風險</div>
+
+      <div class="person">
+        <div class="nmrow"><span class="role">專案經理 M</span><span class="cnt">28 筆 · 其中 7 筆上報</span></div>
+        <div class="callout danger"><div class="h">▲ 看得到的問題</div>
+          <ul><li>兩個專案卡在「等對方回覆／等創辦人 B 排時間」超過一週；分潤怎麼算一直沒定案，把整個財務分析都擋住了。</li></ul></div>
+        <div class="callout warn"><div class="h">◆ 隱藏的問題</div>
+          <ul><li>同一份流程一天內存了四個版本（把公司腦當草稿本在用）。</li>
+          <li>一個人同時扛六條業務線——這是<b>正在形成的第二個「只靠一個人」風險</b>，系統在出事之前就先標記出來。</li></ul></div>
+      </div>
+
+      <div class="person">
+        <div class="nmrow"><span class="role">財務主管 F</span><span class="cnt">15 筆 · 其中 12 筆上報</span></div>
+        <div class="callout danger"><div class="h">▲ 看得到的問題</div>
+          <ul><li>已經正式上報：整間公司的財會七項工作全壓在她一個人身上、判斷只在她腦裡、沒有人能臨時接手。這是最高風險，但上報兩週都沒有回應。</li></ul></div>
+        <div class="callout warn"><div class="h">◆ 隱藏的問題</div>
+          <ul><li>同一批內容重複存了兩輪；她自己計畫要做的「把判斷寫下來」兩週完全沒動——缺的是時間安排，不是意願。</li></ul></div>
+      </div>
+
+      <div class="person">
+        <div class="nmrow"><span class="role">創辦人 A</span><span class="cnt">8 筆 · 皆未上報</span></div>
+        <p style="margin:8px 0 0">存的全是高品質的製作成果，而且已經寫到「別人照著做就行」的程度。系統據此建議：這些標準已經可以交給別人執行，不必創辦人親自做。</p>
+      </div>
+
+      <div class="person">
+        <div class="nmrow"><span class="role">創辦人 B</span><span class="cnt">1 筆</span></div>
+        <p style="margin:8px 0 0">這兩週產出全公司品質最高的一份系統設計（專案全流程 SOP）；但同時，有<b>三件事全公司都在等她本人動手</b>。</p>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- TURN 3 -->
+  <div class="turn">
+    <div class="q step"><div class="bubble">幫我整理成「急不急、重不重要」，兩位創辦人該先處理什麼？該建立什麼制度來解決？</div></div>
+    <div class="a step"><div class="av">B</div><div class="body">
+      <div class="who"><b>Bek OS</b> · 產出待決定清單、緊急重要分類、瓶頸診斷與輕量制度</div>
+      <div class="chip"><span class="dot"></span>挑出「方案都備好、只差老闆一句話」的事</div>
+
+      <div class="card">
+        <h4>待決定清單（一頁看完）</h4>
+        <table>
+          <thead><tr><th class="c">#</th><th>要決定的事</th><th>誰來決定</th><th>建議選項</th></tr></thead>
+          <tbody>
+            <tr><td class="c">1</td><td>財務主管 F 的工作要交接給誰（最高風險，上報兩週沒回）</td><td>創辦人 A</td><td>指定承接人＋開始把工作寫下來</td></tr>
+            <tr><td class="c">2</td><td>專案分潤怎麼算、過去的案子怎麼盤</td><td>創辦人 A</td><td>先定原則，細算交給 PM 排</td></tr>
+            <tr><td class="c">3</td><td>跨國專案數十萬元貨款怎麼收</td><td>創辦人 A</td><td>本季內結案：分期收或認賠</td></tr>
+            <tr><td class="c">4</td><td>海外見學團的時效（機票押金逾期、住宿取消期限）</td><td>創辦人 A／B</td><td>同意把製作物縮編</td></tr>
+            <tr><td class="c">5</td><td>薪酬分潤制度的方向（四六比）</td><td>創辦人 A</td><td>確認方向就能套實際數字</td></tr>
+            <tr><td class="c">6</td><td>主力品牌佔營收 65%，太集中怎麼分散</td><td>創辦人 A</td><td>指定接下來評估哪些品類</td></tr>
+            <tr><td class="c">7</td><td>新品牌要不要開通路批發</td><td>創辦人 A</td><td>開→重談折數；不開→維持</td></tr>
+            <tr><td class="c">8</td><td>社群主帳號權限（卡同仁兩週）</td><td>創辦人 B</td><td>十分鐘就能處理，馬上做</td></tr>
+            <tr><td class="c">9</td><td>把銷售報表的編輯權交給同仁</td><td>創辦人 B</td><td>交出去執行，自己保留審核</td></tr>
+            <tr><td class="c">10</td><td>營運分析前兩階段何時能做</td><td>創辦人 B</td><td>給個完成日，逾期就先用現有格式</td></tr>
+            <tr><td class="c">11</td><td>工地品質管控用哪個方案</td><td>創辦人 A</td><td>先用「錄影＋書面規範」最省的組合</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <h4>待辦全景：急不急 × 重不重要</h4>
+        <div class="matrix2">
+          <div class="quad q1"><span class="qh">重要 × 緊急</span><div>① F 交接方向　② 分潤方法定調　③ 數十萬貨款（本季）　④ 見學團時效項</div></div>
+          <div class="quad q2"><span class="qh">重要 × 不緊急</span><div>⑤ 薪酬制度套數字　⑥ 主力品牌分散　⑦ F 把判斷寫下來　⑧ M 單點沉澱　⑨ 資料整理</div></div>
+          <div class="quad q3"><span class="qh">不重要 × 緊急</span><div>⑩ 社群權限（十分鐘）　⑪ 交出報表編輯權　⑫ 工地品管拍板</div></div>
+          <div class="quad q4"><span class="qh">不重要 × 不緊急</span><div>⑬ 個別重複紀錄清理（併進 ⑨ 一次做）</div></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h4>兩位創辦人的瓶頸（用紀錄講話，不是究責）</h4>
+        <p>員工用了 AI 之後，做事速度快了好幾倍——專案經理 M 兩週就存了 28 筆、財務主管 F 一個人做完整套薪酬制度。但老闆拍板的速度沒跟上，公司的瓶頸從「事情做太慢」變成「在等老闆決定」。</p>
+        <p class="lead"><b>創辦人 A：</b>有六件事在等他一句話（每件都附上報日期、已經等了幾天）；這兩週他親手記的 8 筆全是做設計的事，沒有一筆是拍板決定；員工上報給他的事，看不到任何回應。</p>
+        <p class="lead"><b>創辦人 B：</b>有三件事全公司都在等她本人動手；她「沒把權限交出去」和財務主管「判斷只在自己腦裡」其實是同一種風險；她每次推翻先前的決定，都值得記下來，讓 AI 慢慢學會她的標準。</p>
+        <div class="callout info"><div class="h">› 給創辦人的自問題（示例）</div>
+          <p>這三件事裡，哪些是「只有你能決定」、哪些其實只是「只有你有權限去動」？後者是不是可以把權限交出去、你只負責點頭？</p></div>
+      </div>
+
+      <div class="card">
+        <h4>建議建立的制度（都很輕，適合小公司）</h4>
+        <div class="mech">
+          <div class="m"><b>① 老闆拍板不拖過三天</b>需要老闆決定的事，三天內一定要有回應（「這樣做」或「這件下週再決定」都行）。超過三天沒回，系統自動發 LINE 到老闆群提醒。每週固定半小時，只把待決定的事一次講完。</div>
+          <div class="m"><b>② 上報要有下文，定期清檔</b>員工上報的每件事都要有明確結果：已決定／延到某天／知道了不用決定。處理完超過三個月的，自動收進存檔，公司腦只留還在進行的。</div>
+          <div class="m"><b>③ 把「只有一個人能做」的事交出去</b>列出所有只有某個人能做的事，逐項決定要不要交給別人。老闆負責點頭同意，不必自己動手。</div>
+          <div class="m"><b>④ 把老闆的眼光記下來</b>老闆每次改掉之前的決定，就記三行：員工原本怎麼想、老闆最後怎麼決定、為什麼不同。累積起來，AI 會慢慢學會老闆的品味。</div>
+          <div class="m"><b>⑤ 不必再多花時間訪談</b>不用另外找員工訪談；直接從他們平常的紀錄和開會內容整理重點，員工不必為這件事多做事。</div>
+          <div class="m"><b>⑥ 避免公司腦越存越亂</b>同一件事更新時要註明「這是最新版、之前的作廢」；完整長文件放知識庫、公司腦只留精華，三個月後才不會全是重複。</div>
+        </div>
+      </div>
+
+      <div class="caps">
+        <h4>這份掃描說明的 Bek OS 能力</h4>
+        <div class="row"><span class="k">零額外負擔</span><span>沒有人為了這份報告多做任何事，全部來自大家平常的工作紀錄。</span></div>
+        <div class="row"><span class="k">可以查證</span><span>每個判斷都附上紀錄日期，老闆可以自己回頭查，不用靠印象。</span></div>
+        <div class="row"><span class="k">提早示警</span><span>在「只靠一個人、資料變亂」還沒出事之前，就先標記出來。</span></div>
+        <div class="row"><span class="k">給決定用</span><span>產出的不是一堆看不完的圖表，是一頁可以直接逐項回覆的待決定清單。</span></div>
+        <div class="row"><span class="k">全程自動</span><span>從發現問題 → 自動用 LINE 提醒 → 處理完自動存檔，一條龍不用人一直盯。</span></div>
+      </div>
+    </div></div>
+  </div>
+
+  <div class="cta-block">
+    <div class="cta-h">想幫你的公司做同樣的營運掃描？</div>
+    <div class="cta-p">這份示範背後是 Bek OS——把公司的判斷、流程與脈絡編譯進 AI，讓它從日常紀錄自動長出管理視角。歡迎預約一場免費的對齊對話。</div>
+    <a class="cta-btn" href="https://cal.com/bektsai/30min" target="_blank" rel="noopener">免費預約一場對齊的對話 →</a>
+    <a class="cta-back" href="https://www.bekhelpme.com">← 回 bekhelpme.com 看更多</a>
+  </div>
+  <div class="foot">
+    本示範所有人名、公司名、專案名均已代稱化，金額均已模糊化。<br>
+    Bek OS · 公司雲腦（AI 記憶層）營運掃描示例
+  </div>
+  <button class="replay" id="replay">↻ 重播示範</button>
+</div>
+
+<div class="inputbar">
+  <div class="box">
+    <input id="ask" placeholder="問公司雲腦任何事：這兩週誰的紀錄開始出現重複？" aria-label="示範輸入框">
+    <button class="send" id="send" aria-label="送出">↑</button>
+  </div>
+</div>
+
+<script>
+(function(){
+  var wrap=document.getElementById('wrap');
+  var steps=[].slice.call(document.querySelectorAll('.step'));
+  function play(){
+    wrap.classList.add('anim');
+    steps.forEach(function(s,i){ s.style.animation='none'; void s.offsetWidth;
+      s.style.animationDelay=(i*0.28)+'s'; s.style.animation=''; });
+    document.querySelectorAll('.nm[data-n]').forEach(function(el){
+      var target=+el.getAttribute('data-n'), t0=null, dur=900;
+      function tick(ts){ if(!t0)t0=ts; var p=Math.min((ts-t0)/dur,1);
+        el.firstChild.nodeValue=Math.round(target*p); if(p<1)requestAnimationFrame(tick);
+        else el.firstChild.nodeValue=target; }
+      el.firstChild.nodeValue='0'; requestAnimationFrame(tick);
+    });
+  }
+  document.getElementById('replay').addEventListener('click',play);
+  var send=document.getElementById('send'), ask=document.getElementById('ask');
+  function bump(){ if(send.animate)send.animate([{transform:'scale(1)'},{transform:'scale(.9)'},{transform:'scale(1)'}],{duration:220});
+    ask.placeholder='示範模式：完整互動請看上方三段掃描結果'; }
+  send.addEventListener('click',bump);
+  ask.addEventListener('keydown',function(e){if(e.key==='Enter')bump();});
+  if(!matchMedia('(prefers-reduced-motion: reduce)').matches) play();
+})();
+</script>
+</body>
+</html>
