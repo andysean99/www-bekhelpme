@@ -1,8 +1,6 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Pin the workspace root to this project so Turbopack ignores the stray
-  // lockfile in the parent "Framer Web builder" folder.
   turbopack: {
     root: __dirname,
   },
@@ -12,6 +10,14 @@ const nextConfig: NextConfig = {
         source: "/Bek_Open_Brain",
         destination: "/bek-open-brain",
         permanent: true,
+      },
+    ];
+  },
+  async rewrites() {
+    return [
+      {
+        source: "/open_brain_demo1",
+        destination: "/open_brain_demo1.html",
       },
     ];
   },

@@ -114,6 +114,21 @@ tr.sum td{font-weight:700;color:var(--deep);background:#EAEEF2}
 .cta-btn:hover{background:#1B44D6}
 .cta-back{display:block;color:#9DB2C4;font-size:12.5px;text-decoration:none;margin-top:14px}
 .cta-back:hover{text-decoration:underline}
+.ob-link{color:#AFC9FF;text-decoration:none;font-size:12.5px;margin-left:14px}
+.ob-link:hover{text-decoration:underline}
+.framing{background:#fff;border:1px solid var(--line);border-left:3px solid var(--bar);border-radius:0 12px 12px 0;padding:13px 18px;margin:0 0 22px;font-size:14.5px;line-height:1.75;color:var(--ink)}
+.aframe{font-size:14.5px;color:var(--deep);font-weight:500;margin:0 0 10px;line-height:1.6}
+.threehook{background:#051C2C;color:#EAF0F6;border-radius:14px;padding:20px 22px;margin:26px 0 0;font-size:15px;line-height:1.8}
+.threehook a{color:#AFC9FF;font-weight:700;text-decoration:none}.threehook a:hover{text-decoration:underline}
+.faqd{margin:22px 0 0}.faqd h4{font-size:16px;color:var(--deep);margin:0 0 12px}
+.faqd .qa{background:#fff;border:1px solid var(--line);border-radius:12px;padding:13px 16px;margin-bottom:10px}
+.faqd .qq{font-weight:700;color:var(--deep);font-size:14.5px;margin-bottom:5px}
+.faqd .aa{font-size:14px;color:var(--ink);line-height:1.75}
+.ibchips{max-width:880px;margin:0 auto;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.ib-label{font-size:13px;color:var(--muted);font-weight:500;margin-right:2px}
+.qchip{font-size:13px;color:var(--deep);background:#fff;border:1px solid var(--line);border-radius:20px;padding:7px 14px;text-decoration:none;white-space:nowrap}
+.qchip:hover{border-color:var(--bar);color:var(--bar)}
+.qchip.primary{background:var(--bar);color:#fff;border-color:var(--bar);font-weight:500}.qchip.primary:hover{background:#1B44D6;color:#fff}
 </style>
 </head>
 <body>
@@ -122,17 +137,20 @@ tr.sum td{font-weight:700;color:var(--deep);background:#EAEEF2}
   <div><div class="brand">Bek OS</div></div>
   <div class="sub">公司雲腦 · 營運掃描</div>
   <a class="backlink" href="https://www.bekhelpme.com">← 回 bekhelpme.com</a>
+  <a class="ob-link" href="https://www.bekhelpme.com/bek-open-brain">這是什麼？→ 了解公司雲腦</a>
   <div class="tag" style="margin-left:0">示範資料 · 已匿名</div>
 </div>
 
 <div class="wrap" id="wrap">
   <div class="day"><span>示範情境：約 8 人規模的設計整合企業（D 公司）· 某雙週 14 天</span></div>
+  <div class="framing">這是一場真實的雙週營運掃描（人名、公司、金額已代稱與模糊化）。老闆打一句白話，AI 從公司雲腦（Open Brain）調出 65 筆<b>有日期、有出處</b>的紀錄，直接回一張可以逐項拍板的決定清單——每一句判斷，都查得到根據。</div>
 
   <!-- TURN 1 -->
   <div class="turn">
-    <div class="q step"><div class="bubble">查一下這兩週每個人在公司雲腦存了幾筆、上報幾筆，統計一下。</div></div>
+    <div class="q step"><div class="bubble">查一下這兩週每個人在公司雲腦存了幾筆、上報了幾筆，幫我統計。</div></div>
     <div class="a step"><div class="av">B</div><div class="body">
       <div class="who"><b>Bek OS</b> · 直接從公司雲腦讀出來，不必任何人另外填報</div>
+      <div class="aframe">14 天、8 位成員、65 筆。先看誰在用、誰還沒。</div>
       <div class="chip live"><span class="dot"></span><span>掃描公司雲腦 · 65 筆 · 8 位成員 · 14 天</span></div>
       <div class="metrics">
         <div class="metric"><div class="lb">總筆數</div><div class="nm" data-n="65">65</div></div>
@@ -161,9 +179,10 @@ tr.sum td{font-weight:700;color:var(--deep);background:#EAEEF2}
 
   <!-- TURN 2 -->
   <div class="turn">
-    <div class="q step"><div class="bubble">分析每個人存的資料，有什麼看得到的問題、和沒說出來的隱藏問題？深入一點。</div></div>
+    <div class="q step"><div class="bubble">分析每個人存的內容：看得到的問題是什麼？沒說出口的隱藏問題是什麼？講深一點。</div></div>
     <div class="a step"><div class="av">B</div><div class="body">
       <div class="who"><b>Bek OS</b> · 比對 8 位成員的紀錄型態，找出卡點與風險</div>
+      <div class="aframe">顯性問題，紀錄裡直接看得到；隱藏問題，藏在紀錄和紀錄之間的落差。</div>
       <div class="chip"><span class="dot"></span>分析紀錄型態 · 偵測重複與「只靠一個人」的風險</div>
 
       <div class="person">
@@ -197,9 +216,10 @@ tr.sum td{font-weight:700;color:var(--deep);background:#EAEEF2}
 
   <!-- TURN 3 -->
   <div class="turn">
-    <div class="q step"><div class="bubble">幫我整理成「急不急、重不重要」，兩位創辦人該先處理什麼？該建立什麼制度來解決？</div></div>
+    <div class="q step"><div class="bubble">幫我照「急不急、重不重要」排好。我們兩個創辦人該先處理什麼？要建什麼制度，才不會一直重演？</div></div>
     <div class="a step"><div class="av">B</div><div class="body">
       <div class="who"><b>Bek OS</b> · 產出待決定清單、緊急重要分類、瓶頸診斷與輕量制度</div>
+      <div class="aframe">不是報表，是一張等你點頭的清單：11 件事，每件寫清楚誰決定、建議選哪個。</div>
       <div class="chip"><span class="dot"></span>挑出「方案都備好、只差老闆一句話」的事</div>
 
       <div class="card">
@@ -264,10 +284,20 @@ tr.sum td{font-weight:700;color:var(--deep);background:#EAEEF2}
     </div></div>
   </div>
 
+  <div class="threehook">你看到的這份掃描，不是因為 AI 特別聰明，是因為它拿到的每一條知識都過了關卡——有來源、有信心、有有效期。沒有治理的 AI 也能寫出很像樣的報告；差別在於，你敢不敢照著做。<br>想知道你的公司現在缺哪一層？<a href="https://www.bekhelpme.com/bek-open-brain">看三種公司的差別 →</a></div>
+  <div class="faqd">
+    <h4>關於這份實錄，你可能想問</h4>
+    <div class="qa"><div class="qq">這份掃描是真的還是樣板？</div><div class="aa">真實案例、真實資料，已匿名：結構與判斷流程都是實際發生的，人名／公司名／專案名已代稱化、金額已模糊化。</div></div>
+    <div class="qa"><div class="qq">為什麼要匿名？放客戶名不是更有說服力？</div><div class="aa">裡面是一家公司的營運判斷——這正是公司雲腦要保護的東西。若我們為了行銷把客戶的判斷攤出來，你憑什麼相信我們會保護你的？匿名是原則的示範。</div></div>
+    <div class="qa"><div class="qq">換成我的公司，做出來會長一樣嗎？</div><div class="aa">結構會像，內容不會。它讀的是你雲腦裡「已核可」的知識與你的實際營運資料——不是報告模板，是你的判斷在跑。</div></div>
+    <div class="qa"><div class="qq">雙週掃描是固定服務嗎？</div><div class="aa">前兩個月，在自動化的 AI 顧問正式上線前，由 Bek 親自輕量顧問陪跑；之後掃描逐步自動化。老闆每次的投入，主要是看報告＋裁示的時間。</div></div>
+    <div class="qa"><div class="qq">這場掃描背後，客戶前期建腦花了多久？</div><div class="aa">這個匿名案例從導入到第一次掃描約兩個月（我們正在把它縮短到一個月）。掃描的品質來自前面的治理，不是當天的 AI。</div></div>
+  </div>
   <div class="cta-block">
     <div class="cta-h">想幫你的公司做同樣的營運掃描？</div>
-    <div class="cta-p">這份示範背後是 Bek OS——把公司的判斷、流程與脈絡編譯進 AI，讓它從日常紀錄自動長出管理視角。歡迎預約一場免費的對齊對話。</div>
+    <div class="cta-p">這份示範背後是 Bek OS——把你和關鍵人的判斷、流程與脈絡編譯進 AI，而且這層由我們幫你顧，不是丟工具叫你自己維護。</div>
     <a class="cta-btn" href="https://cal.com/bektsai/30min" target="_blank" rel="noopener">免費預約一場對齊的對話 →</a>
+    <div style="margin-top:12px"><a class="cta-back" href="https://www.bekhelpme.com/bek-open-brain" style="color:#AFC9FF">想先弄懂它憑什麼敢這樣回答？→ 這是什麼：了解公司雲腦（Open Brain）</a></div>
     <a class="cta-back" href="https://www.bekhelpme.com">← 回 bekhelpme.com 看更多</a>
   </div>
   <div class="foot">
@@ -278,9 +308,11 @@ tr.sum td{font-weight:700;color:var(--deep);background:#EAEEF2}
 </div>
 
 <div class="inputbar">
-  <div class="box">
-    <input id="ask" placeholder="問公司雲腦任何事：這兩週誰的紀錄開始出現重複？" aria-label="示範輸入框">
-    <button class="send" id="send" aria-label="送出">↑</button>
+  <div class="ibchips">
+    <span class="ib-label">下一步：</span>
+    <a class="qchip" href="https://cal.com/bektsai/30min" target="_blank" rel="noopener">我們公司也能這樣掃嗎？</a>
+    <a class="qchip" href="https://www.bekhelpme.com/bek-open-brain">AI 怎麼知道哪條紀錄還算數？</a>
+    <a class="qchip primary" href="https://www.bekhelpme.com/bek-open-brain">這是什麼？→ 了解公司雲腦</a>
   </div>
 </div>
 
@@ -301,11 +333,6 @@ tr.sum td{font-weight:700;color:var(--deep);background:#EAEEF2}
     });
   }
   document.getElementById('replay').addEventListener('click',play);
-  var send=document.getElementById('send'), ask=document.getElementById('ask');
-  function bump(){ if(send.animate)send.animate([{transform:'scale(1)'},{transform:'scale(.9)'},{transform:'scale(1)'}],{duration:220});
-    ask.placeholder='示範模式：完整互動請看上方三段掃描結果'; }
-  send.addEventListener('click',bump);
-  ask.addEventListener('keydown',function(e){if(e.key==='Enter')bump();});
   if(!matchMedia('(prefers-reduced-motion: reduce)').matches) play();
 })();
 </script>
