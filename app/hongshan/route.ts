@@ -200,6 +200,7 @@ td.t{color:var(--green-t);font-weight:700}
   table{font-size:12.5px}th,td{padding:6px 8px}
   .cta{flex-direction:column;text-align:center}
 }
+
 </style>
 </head>
 <body>
@@ -409,78 +410,20 @@ td.t{color:var(--green-t);font-weight:700}
   </div>
 </section>
 
-<!-- A-07 90天 -->
-<section class="sheet" id="s7">
-  <div class="paper"><div class="inner">
-    <div class="eyebrow a">07 ── 怎麼做、多久、怎麼算成功</div>
-    <h1 class="a d1"><span class="accent" style="font-variant-numeric:tabular-nums"><span class="num" data-n="90">0</span> 天</span>，拿數字對答案</h1>
-    <div class="rule a d1"></div>
-    <div class="tl">
-      <div class="step a d1"><div class="wk">第 1–2 週</div><b>定規矩</b><p>跟各部門核對訪談內容、定分類和負責人（一場半天會議）</p></div>
-      <div class="step a d2"><div class="wk">第 3–6 週</div><b>裝腦</b><p>訪談成果、工項價格、協力商紀錄收進真腦（各部門交 Excel）</p></div>
-      <div class="step a d3"><div class="wk">第 5–8 週</div><b>收老闆的功夫</b><p>與您深談 2–3 次，報價判斷、接案標準、風險紅線入庫。以後同仁送簽前可先問 AI「老闆會怎麼看」</p></div>
-      <div class="step a d4"><div class="wk">第 7–12 週</div><b>試一個 AI ＋ 驗收</b><p>第一個 AI 接腦實際跑，拿基準數字對答案</p></div>
-    </div>
-    <table class="a d5">
-      <tr><th>現在的狀況（訪談實測）</th><th>90 天後要看到的方向</th></tr>
-      <tr><td>佳瑾要一份實務資料，等 2 天到 1 週</td><td class="t">真腦裡直接查，馬上有</td></tr>
-      <tr><td>庭蓉成控表一案重做 5–10 次，每次 2–3 天</td><td class="t">AI 比對新舊版，重做時間明顯縮短</td></tr>
-      <tr><td>亭儀每週催 7 家廠商、每家 2–3 次電話</td><td class="t">自動催，人不用掛在電話上</td></tr>
-      <tr><td>玉琴同樣的問題反覆回答</td><td class="t">常見問題 AI 先答第一輪</td></tr>
-      <tr><td>案子交接會掉棒</td><td class="t">案件功夫存在腦裡，不跟著人走</td></tr>
-    </table>
-    <p class="a d6" style="margin-top:10px;font-size:14.5px">開工前這些數字雙方簽字認定；90 天後回來對。成不成看數字，不看感覺。同仁負擔：導入第一個月每週約一小時，錄播教材配 AI 練，<b>不佔您的時間</b>。</p>
-  </div>
-  <div class="tblock"><div>工程名稱 <b>紅山 AI 智慧營運平台</b></div><div>圖名 <b>90 天施工計畫</b></div><div>圖號 <b>A-07</b></div><div>日期 2026-07-11</div><div>繪製 Bek × Max</div></div>
-  </div>
-</section>
 
-<!-- A-08 邊界與承諾 -->
-<section class="sheet" id="s8">
-  <div class="paper"><div class="inner">
-    <div class="eyebrow a">08 ── 先講清楚，免得期待錯位</div>
-    <h1 class="a d1">我們不做什麼</h1>
-    <div class="rule a d1"></div>
-    <ul class="nots">
-      <li class="a d1"><b>不碰會計師和報稅</b>——合規的事維持現在的專業分工</li>
-      <li class="a d2"><b>這個階段不裝、也不換 ERP</b>——等流程穩了，陪紅山帶規格去採購，真腦資料直接接上</li>
-      <li class="a d3"><b>薪資和個資鎖在權限裡</b>——不開放亂查</li>
-      <li class="a d4"><b>不綁任何一家 AI 品牌</b>——標準插座，引擎隨時換最好的</li>
-      <li class="a d5"><b>不承諾消除業主和協力商的等待</b>——只承諾少來回、少重做、少掛電話</li>
-    </ul>
-    <div class="co note a d6"><b>■ 一句承諾</b>資料從第一天起就是紅山的：開放格式、隨時可整批帶走。合作若結束，腦和功夫都留在紅山。</div>
-  </div>
-  <div class="tblock"><div>工程名稱 <b>紅山 AI 智慧營運平台</b></div><div>圖名 <b>邊界與承諾</b></div><div>圖號 <b>A-08</b></div><div>日期 2026-07-11</div><div>繪製 Bek × Max</div></div>
-  </div>
-</section>
 
-<!-- A-09 四問＋下一步 -->
-<section class="sheet" id="s9">
-  <div class="paper"><div class="inner">
-    <div class="eyebrow a">09 ── 不管最後找誰做</div>
-    <h1 class="a d1">用四個問題，考所有廠商（包括我們）</h1>
-    <div class="rule a d1"></div>
-    <div class="qs">
-      <div class="q a d1"><div class="qn">1</div><b>「資料放在哪？我隨時要整批帶走，可以嗎？」</b><p>資料是紅山的，不是廠商的</p></div>
-      <div class="q a d2"><div class="qn">2</div><b>「你們綁死哪一家 AI？」</b><p>這行一年換一次龍頭，架構要能換引擎</p></div>
-      <div class="q a d3"><div class="qn">3</div><b>「以後改規則，我的人自己能改嗎？」</b><p>避免每次調整都付顧問費</p></div>
-      <div class="q a d4"><div class="qn">4</div><b>「90 天內，拿得出看得到數字的成果嗎？」</b><p>只給三年大圖、不給三個月成果的，不要簽</p></div>
-    </div>
-    <div class="cta a d5">
-      <div class="n">→</div>
-      <p><b>下一步：</b>合作怎麼分階段、雙方各出什麼、費用怎麼跟 90 天驗收綁在一起（<b>做不到不付</b>）——由商務窗口 <b>Max</b> 與您當面談。<br>
-      蓋房子，不會先買精裝修的家具，會先打地基。14 份訪談，地基已經開挖了——<b>不要停</b>。</p>
-    </div>
-  </div>
-  <div class="tblock"><div>工程名稱 <b>紅山 AI 智慧營運平台</b></div><div>圖名 <b>下一步</b></div><div>圖號 <b>A-09</b></div><div>日期 2026-07-11</div><div>繪製 Bek × Max</div></div>
-  </div>
-</section>
+
+
+
+
+
+
 
 </div><!-- /wrap -->
 
 <script>
 (function(){
-  var sheets=[].slice.call(document.querySelectorAll('.sheet'));
+  var sheets=[].slice.call(document.querySelectorAll('.sheet')).filter(function(s){return getComputedStyle(s).display!=='none';});
   var isDesktop=window.matchMedia('(min-width:769px)').matches;
   var reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if(isDesktop){document.body.classList.add('deck');}
