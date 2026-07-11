@@ -8,5 +8,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 1,
     },
+    {
+      url: "https://www.bekhelpme.com/open-brain-case-01",
+      lastModified: new Date("2026-07-11"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
   ];
 }
