@@ -169,8 +169,9 @@ details.card .card-body table{min-width:520px}
 .iframe-fallback{position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px; text-align:center; color:var(--ink-2); font-size:14px; padding:30px; line-height:1.9}
 .iframe-fallback .glyph{font-size:30px; opacity:.5}
 .modal-stage iframe{position:absolute; inset:0; width:100%; height:100%; border:0; background:transparent; visibility:hidden}
-.modal-stage iframe.loaded{visibility:visible; background:#fff; z-index:3}
-.stage-inner.show-card iframe{visibility:hidden}
+.modal-stage iframe.loaded{visibility:visible; background:#fff}
+.stage-inner.has-card iframe{visibility:hidden}
+.stage-inner.has-card.show-frame iframe.loaded{visibility:visible; z-index:3}
 .link-card{position:absolute; inset:0; display:none; flex-direction:column; justify-content:center; gap:14px; padding:40px min(9%,64px); overflow-y:auto; background:var(--bg); z-index:2}
 .link-card.show{display:flex}
 .link-card .lc-host{font-size:12.5px; letter-spacing:.14em; color:var(--accent); text-transform:uppercase; font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
@@ -1104,16 +1105,18 @@ footer.colophon{margin-top:90px; padding-top:26px; border-top:1px solid var(--ha
     frame.classList.remove('loaded');
     frame.removeAttribute('src');
     var card = cards[url];
-    stageInner.classList.remove('show-card');
+    stageInner.classList.remove('show-frame');
     btnCardView.hidden = true;
     if(card){
-      // 有導覽卡：先顯示卡片墊底，同時嘗試載入原網頁；載入成功 iframe 會蓋上來
+      // 有導覽卡：卡片為主畫面；原網頁在背景嘗試載入，載好後出現按鈕由使用者手動切換
+      stageInner.classList.add('has-card');
       lcHost.textContent = hostOf(url);
       lcTitle.textContent = card.t;
       lcDesc.textContent = card.d;
       linkCard.classList.add('show');
       stageHint.textContent = HINT_CARD;
     } else {
+      stageInner.classList.remove('has-card');
       linkCard.classList.remove('show');
       stageHint.textContent = HINT_IFRAME;
     }
@@ -1129,7 +1132,8 @@ footer.colophon{margin-top:90px; padding-top:26px; border-top:1px solid var(--ha
     backdrop.setAttribute('aria-hidden','true');
     frame.classList.remove('loaded');
     frame.removeAttribute('src');
-    stageInner.classList.remove('show-card');
+    stageInner.classList.remove('show-frame');
+    stageInner.classList.remove('has-card');
     btnCardView.hidden = true;
     document.body.style.overflow = '';
     resetCopy();
@@ -1169,19 +1173,19 @@ footer.colophon{margin-top:90px; padding-top:26px; border-top:1px solid var(--ha
 
   // iframe 僅在真正載入成功後顯示；被 CSP／X-Frame-Options 擋下時維持隱藏，露出底層提示
   function setCardBtn(){
-    btnCardView.textContent = stageInner.classList.contains('show-card') ? '看原網頁' : '看導覽卡';
+    btnCardView.textContent = stageInner.classList.contains('show-frame') ? '看導覽卡' : '看網頁';
   }
   btnCardView.addEventListener('click', function(){
-    stageInner.classList.toggle('show-card');
+    stageInner.classList.toggle('show-frame');
     setCardBtn();
   });
   frame.addEventListener('load', function(){
     if(frame.getAttribute('src') && backdrop.classList.contains('open') && !frameBlocked){
       frame.classList.add('loaded');
-      if(linkCard.classList.contains('show')){
+      if(stageInner.classList.contains('has-card')){
         btnCardView.hidden = false;
         setCardBtn();
-        stageHint.textContent = '已載入原網頁預覽。若顯示異常，可點「看導覽卡」或「開新分頁 ↗」。';
+        stageHint.textContent = '原網頁已就緒——點上方「看網頁」可切換預覽；若顯示異常，「開新分頁 ↗」直達原文。';
       }
     }
   });
