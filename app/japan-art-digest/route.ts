@@ -169,7 +169,8 @@ details.card .card-body table{min-width:520px}
 .iframe-fallback{position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px; text-align:center; color:var(--ink-2); font-size:14px; padding:30px; line-height:1.9}
 .iframe-fallback .glyph{font-size:30px; opacity:.5}
 .modal-stage iframe{position:absolute; inset:0; width:100%; height:100%; border:0; background:transparent; visibility:hidden}
-.modal-stage iframe.loaded{visibility:visible; background:#fff}
+.modal-stage iframe.loaded{visibility:visible; background:#fff; z-index:3}
+.stage-inner.show-card iframe{visibility:hidden}
 .link-card{position:absolute; inset:0; display:none; flex-direction:column; justify-content:center; gap:14px; padding:40px min(9%,64px); overflow-y:auto; background:var(--bg); z-index:2}
 .link-card.show{display:flex}
 .link-card .lc-host{font-size:12.5px; letter-spacing:.14em; color:var(--accent); text-transform:uppercase; font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
@@ -1046,6 +1047,7 @@ footer.colophon{margin-top:90px; padding-top:26px; border-top:1px solid var(--ha
     <div class="modal-bar">
       <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
       <span class="url-box"><input id="modalUrl" type="text" readonly value="" aria-label="網址"></span>
+      <button class="mbtn" id="btnCardView" type="button" hidden>看導覽卡</button>
       <button class="mbtn" id="btnCopy" type="button">複製網址</button>
       <a class="mbtn" id="btnOpen" href="#" target="_blank" rel="noopener noreferrer">開新分頁 ↗</a>
       <button class="mbtn close" id="btnClose" type="button" aria-label="關閉">✕</button>
@@ -1085,8 +1087,10 @@ footer.colophon{margin-top:90px; padding-top:26px; border-top:1px solid var(--ha
   var lcTitle = document.getElementById('lcTitle');
   var lcDesc = document.getElementById('lcDesc');
   var stageHint = document.querySelector('.stage-hint');
+  var stageInner = document.querySelector('.stage-inner');
+  var btnCardView = document.getElementById('btnCardView');
   var HINT_IFRAME = '多數網站不允許被內嵌預覽——若下方空白或出現錯誤頁，請改用上方「複製網址」或「開新分頁 ↗」。';
-  var HINT_CARD = '來源導覽卡：說明整理自本文的研究素材。閱讀原文請點「開新分頁 ↗」。';
+  var HINT_CARD = '嘗試載入原網頁中——若該網站拒絕被內嵌，會停留在導覽卡；「開新分頁 ↗」可直達原文。';
   var cards = {};
   try{ cards = JSON.parse(document.getElementById('linkCards').textContent); }catch(e){}
 
@@ -1100,8 +1104,10 @@ footer.colophon{margin-top:90px; padding-top:26px; border-top:1px solid var(--ha
     frame.classList.remove('loaded');
     frame.removeAttribute('src');
     var card = cards[url];
+    stageInner.classList.remove('show-card');
+    btnCardView.hidden = true;
     if(card){
-      // 有導覽卡：直接顯示卡片，不嘗試內嵌（各平台行為一致）
+      // 有導覽卡：先顯示卡片墊底，同時嘗試載入原網頁；載入成功 iframe 會蓋上來
       lcHost.textContent = hostOf(url);
       lcTitle.textContent = card.t;
       lcDesc.textContent = card.d;
@@ -1110,9 +1116,9 @@ footer.colophon{margin-top:90px; padding-top:26px; border-top:1px solid var(--ha
     } else {
       linkCard.classList.remove('show');
       stageHint.textContent = HINT_IFRAME;
-      // 佔位訊息常駐底層；iframe 僅在確認載入成功後才顯示（避免瀏覽器錯誤頁蓋住提示）
-      frame.src = url;
     }
+    // 一律嘗試載入原網頁；iframe 僅在確認載入後才顯示，被拒絕時卡片／提示留在原位
+    frame.src = url;
     backdrop.classList.add('open');
     backdrop.setAttribute('aria-hidden','false');
     document.body.style.overflow = 'hidden';
@@ -1123,6 +1129,8 @@ footer.colophon{margin-top:90px; padding-top:26px; border-top:1px solid var(--ha
     backdrop.setAttribute('aria-hidden','true');
     frame.classList.remove('loaded');
     frame.removeAttribute('src');
+    stageInner.classList.remove('show-card');
+    btnCardView.hidden = true;
     document.body.style.overflow = '';
     resetCopy();
   }
@@ -1160,9 +1168,21 @@ footer.colophon{margin-top:90px; padding-top:26px; border-top:1px solid var(--ha
   }
 
   // iframe 僅在真正載入成功後顯示；被 CSP／X-Frame-Options 擋下時維持隱藏，露出底層提示
+  function setCardBtn(){
+    btnCardView.textContent = stageInner.classList.contains('show-card') ? '看原網頁' : '看導覽卡';
+  }
+  btnCardView.addEventListener('click', function(){
+    stageInner.classList.toggle('show-card');
+    setCardBtn();
+  });
   frame.addEventListener('load', function(){
     if(frame.getAttribute('src') && backdrop.classList.contains('open') && !frameBlocked){
       frame.classList.add('loaded');
+      if(linkCard.classList.contains('show')){
+        btnCardView.hidden = false;
+        setCardBtn();
+        stageHint.textContent = '已載入原網頁預覽。若顯示異常，可點「看導覽卡」或「開新分頁 ↗」。';
+      }
     }
   });
   document.addEventListener('securitypolicyviolation', function(){
