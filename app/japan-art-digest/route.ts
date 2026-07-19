@@ -1062,7 +1062,7 @@ footer.colophon{margin-top:90px; padding-top:26px; border-top:1px solid var(--ha
           <span class="glyph">◫</span>
           <span>此網站不允許內嵌預覽——<br>用上方按鈕複製網址，或開新分頁前往。</span>
         </div>
-        <iframe id="modalFrame" title="網站預覽" sandbox="allow-scripts allow-same-origin" referrerpolicy="no-referrer"></iframe>
+        <iframe id="modalFrame" title="網站預覽" sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox"></iframe>
         <div class="link-card" id="linkCard">
           <div class="lc-host" id="lcHost"></div>
           <div class="lc-title" id="lcTitle"></div>
@@ -1180,6 +1180,9 @@ footer.colophon{margin-top:90px; padding-top:26px; border-top:1px solid var(--ha
   btnCardView.addEventListener('click', function(){
     stageInner.classList.toggle('show-frame');
     setCardBtn();
+    stageHint.textContent = stageInner.classList.contains('show-frame')
+      ? '原網頁預覽中。若畫面空白，代表該網站阻擋被內嵌顯示——點「看導覽卡」返回，或「開新分頁 ↗」看原文。'
+      : '原網頁已就緒——點上方「看網頁」可切換預覽；若顯示異常，「開新分頁 ↗」直達原文。';
   });
   frame.addEventListener('load', function(){
     if(frame.getAttribute('src') && backdrop.classList.contains('open') && !frameBlocked){
