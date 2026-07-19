@@ -21,7 +21,7 @@ const html = String.raw`<!doctype html>
   --accent:#177A5B; --accent-dim:#0F5C44; --s1:#177A5B; --s2:#4661C2;
   --hair:#E3DED2; --hair-2:#EDE9DE; --card:#F3EFE5;
   --heat-1:#DDEDE5; --heat-2:#AFD7C4; --heat-3:#75BA9D; --heat-4:#3F9877; --heat-5:#177A5B;
-  --grid:#E7E2D5; --axis:#C9C3B2;
+  --grid:#E7E2D5; --axis:#C9C3B2; --btn-ink:#FFFFFF;
   color-scheme: light;
 }
 @media (prefers-color-scheme: dark){
@@ -30,7 +30,7 @@ const html = String.raw`<!doctype html>
     --accent:#2FA079; --accent-dim:#45B58D; --s1:#2FA079; --s2:#6B7FE0;
     --hair:#2A2E2A; --hair-2:#232723; --card:#1E221E;
     --heat-1:#1C2B24; --heat-2:#1E4233; --heat-3:#206046; --heat-4:#278159; --heat-5:#2FA079;
-    --grid:#262A26; --axis:#3A3F3A;
+    --grid:#262A26; --axis:#3A3F3A; --btn-ink:#0E1512;
     color-scheme: dark;
   }
 }
@@ -39,7 +39,7 @@ const html = String.raw`<!doctype html>
   --accent:#2FA079; --accent-dim:#45B58D; --s1:#2FA079; --s2:#6B7FE0;
   --hair:#2A2E2A; --hair-2:#232723; --card:#1E221E;
   --heat-1:#1C2B24; --heat-2:#1E4233; --heat-3:#206046; --heat-4:#278159; --heat-5:#2FA079;
-  --grid:#262A26; --axis:#3A3F3A;
+  --grid:#262A26; --axis:#3A3F3A; --btn-ink:#0E1512;
   color-scheme: dark;
 }
 *{box-sizing:border-box}
@@ -162,6 +162,8 @@ details.card .card-body table{min-width:520px}
 .mbtn{border:1px solid var(--hair); background:var(--surface); color:var(--ink); font-size:12.5px; padding:6px 12px; border-radius:8px; cursor:pointer; white-space:nowrap; font-family:inherit; text-decoration:none; display:inline-flex; align-items:center; gap:4px; line-height:1.4}
 .mbtn:hover{border-color:var(--accent); color:var(--accent)}
 .mbtn.copied{border-color:var(--accent); color:var(--accent)}
+#btnCardView{background:var(--accent); border-color:var(--accent); color:var(--btn-ink,#fff); font-weight:700; box-shadow:0 2px 8px rgba(23,122,91,.35)}
+#btnCardView:hover{background:var(--accent-dim); border-color:var(--accent-dim); color:var(--btn-ink,#fff)}
 .mbtn.close{font-weight:700}
 .modal-stage{flex:1; background:var(--bg); display:flex; flex-direction:column; min-height:0}
 .stage-hint{font-size:12px; color:var(--ink-3); padding:7px 14px; border-bottom:1px solid var(--hair); background:var(--card); line-height:1.7}
