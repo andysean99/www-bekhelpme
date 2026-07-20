@@ -198,7 +198,7 @@ footer.colophon{margin-top:90px; padding-top:26px; border-top:1px solid var(--ha
 <header class="masthead">
   <p class="kicker">Research Digest · 2026年7月</p>
   <h1>在米其林出现之前，<br>没有人知道哪家餐厅值得绕路</h1>
-  <p class="standfirst">日本艺术市场研究发现的完整整理——一个还没有人占据的权威真空、正在收紧的窗口、把权威合法盖起来的方法，以及盖好之后怎么被信任、怎么防守、怎么一步一步走。给 Jason 的交互式参考文档：文中每个机构与网站都可以点开预览、复制网址、另开分页。</p>
+  <p class="standfirst">日本艺术市场研究发现的完整整理——一个还没有人占据的权威真空、正在收紧的窗口、把权威合法盖起来的方法，以及盖好之后怎么被信任、怎么防守、怎么一步一步走。给想盖这座灯塔的人的交互式参考文档：文中每个机构与网站都可以点开预览、复制网址、另开分页。</p>
   <p class="meta-line">阅读时间约 25 分钟 · 六张图表 · 文末附完整参考来源库</p>
 </header>
 
@@ -230,7 +230,7 @@ footer.colophon{margin-top:90px; padding-top:26px; border-top:1px solid var(--ha
 
   <p>餐饮业曾经也是这样。在<a class="ent" data-url="https://guide.michelin.com/th/en/to-the-stars-and-beyond-th">米其林指南</a>出现之前，没有人知道哪家餐厅值得专程绕路——好餐厅一直都在，缺的是一个大家都服气的人来说「这家值得」。米其林做的事情，本质上就是把散落的品质信息，变成一套可信的判断。然后整个产业围着它转了一百年。</p>
 
-  <p>日本陶艺，现在就站在「米其林出现之前」的位置。这份文档要讲的，就是这个真空长什么样子、为什么窗口正在收紧、以及一个台湾青瓷艺术家凭什么有机会把这座灯塔盖起来。</p>
+  <p>日本陶艺，现在就站在「米其林出现之前」的位置。这份文档要讲的，就是这个真空长什么样子、为什么窗口正在收紧、以及想把这座灯塔盖起来的人，需要什么条件、可以怎么合法地盖。</p>
 </section>
 
 <!-- ================= 贰 窗口在关上 ================= -->
@@ -377,15 +377,15 @@ footer.colophon{margin-top:90px; padding-top:26px; border-top:1px solid var(--ha
 
   <p>好，假设要盖这座灯塔。第一个直觉通常是：去借官方的壳。挂上日本政府的认证，不就有公信力了吗？</p>
 
-  <p>此路不通，而且是结构性的不通。<a class="ent" data-url="https://www.meti.go.jp/policy/mono_info_service/mono/nichiyo-densan/index.html">伝统的工芸品マーク</a>——经济产业省发的传统工艺品标章——只发给日本国内的百年产地。<a class="ent" data-url="https://www.bunka.go.jp/seisaku/bunkazai/shokai/mukei/">人间国宝</a>是文化庁的行政认定，同样不对外国个人开放。这两扇门，对一个台湾人来说是焊死的。</p>
+  <p>此路不通，而且是结构性的不通。<a class="ent" data-url="https://www.meti.go.jp/policy/mono_info_service/mono/nichiyo-densan/index.html">伝统的工芸品マーク</a>——经济产业省发的传统工艺品标章——只发给日本国内的百年产地。<a class="ent" data-url="https://www.bunka.go.jp/seisaku/bunkazai/shokai/mukei/">人间国宝</a>是文化庁的行政认定，同样不对外国个人开放。这两扇门，对非日本籍的个人来说是焊死的。</p>
 
   <p>而且连「靠近」都要小心。日本的<a class="ent" data-url="https://www.caa.go.jp/policies/policy/representation/fair_labeling/representation_regulation/misleading_representation">景品表示法</a>有一条「优良误认表示」——白话说，就是把东西讲得比实际好就违法；不正竞争防止法还有「品质等误认惹起行为」，让人误会品质或来历也算。所以「鉴定」「人间国宝级」这类词，在行销文案里碰都不能碰。合法的路，不是借壳，是自己盖。</p>
 
   <p>有人盖成过吗？有，而且剧本意外地清晰。<a class="ent" data-url="https://kuramaster.com/ja/entry-requirements/regulation/">Kura Master</a> 是一群法国人办的日本酒评选——外国人评日本最传统的产业，日本酒造界不但没有排斥，反而服气，得奖酒标贴在瓶身上当卖点。<a class="ent" data-url="https://www.internationalwinechallenge.com/Articles/sake-judging-and-awards.html">IWC SAKE</a>（国际葡萄酒挑战赛的清酒部门）也一样。两者证明了同一件事：权威不必来自血统，可以来自<em>评审团的组成与流程的公开</em>。再看日本自己的<a class="ent" data-url="https://toobi-tocfa.or.jp/about/">东美鉴定评価机构</a>——它的信任不是来自一纸证书，而是来自公开的委员会构成加上定期的外部审查。民间评审团模式，是验证过可行的。</p>
 
-  <p>那凭什么是 Jason 来组这个评审团？因为他已经在体系里面了。<a class="ent" data-url="https://www.nihonkogeikai.or.jp/about/">日本工芸会</a>的正会员资格，是日本伝统工芸展入选满四次——Jason 从 2022 到 2026 年连年入选，正走在这条轨道上。这不是外人叩门，是体系内的人往外搭桥。桥的另一端也已经有桩：<a class="ent" data-url="https://www.artagenda.jp/exhibition/detail/5891">岐阜県现代陶芸美术馆与莺歌陶瓷博物馆</a>有文化交流协定，2021 年办过「台湾现代陶芸の力」特展；台湾端的官方对口是 <a class="ent" data-url="https://www.ntcri.gov.tw/">NTCRI</a>（国立台湾工艺研究发展中心），近年合作备忘录的细节<span class="unverified">未查证</span>。</p>
+  <p>那谁有资格来组这个评审团？答案藏在前面每一个成功案例里：发起人必须本身就在体系里面。这个门槛是有刻度的——<a class="ent" data-url="https://www.nihonkogeikai.or.jp/about/">日本工芸会</a>的正会员资格，是日本伝统工芸展入选满四次。一个正走在这条轨道上的创作者来做这件事，就不是外人叩门，而是体系内的人往外搭桥。桥的另一端也已经有桩：<a class="ent" data-url="https://www.artagenda.jp/exhibition/detail/5891">岐阜県现代陶芸美术馆与莺歌陶瓷博物馆</a>有文化交流协定，2021 年办过「台湾现代陶芸の力」特展；台湾端的官方对口是 <a class="ent" data-url="https://www.ntcri.gov.tw/">NTCRI</a>（国立台湾工艺研究发展中心），近年合作备忘录的细节<span class="unverified">未查证</span>。</p>
 
-  <p>第一批背书者从哪里来？从近到远：Jason 在工芸展体系内已经认识的评审与学者，往外一圈是工芸史学者，再往外是台日馆际的策展人，最外圈是媒体——<a class="ent" data-url="https://bijutsu.press/books/5531/">美术手帖</a> 2025 年 1 月才做过「现代の陶芸」特辑，题目已经在编辑台上了。一圈一圈往外推。不用一次到位。</p>
+  <p>第一批背书者从哪里来？从近到远：发起人在工芸展体系内已经认识的评审与学者，往外一圈是工芸史学者，再往外是台日馆际的策展人，最外圈是媒体——<a class="ent" data-url="https://bijutsu.press/books/5531/">美术手帖</a> 2025 年 1 月才做过「现代の陶芸」特辑，题目已经在编辑台上了。一圈一圈往外推。不用一次到位。</p>
 </section>
 
 <!-- ================= 陆 AI 检索的真空实测 ================= -->
@@ -471,11 +471,11 @@ footer.colophon{margin-top:90px; padding-top:26px; border-top:1px solid var(--ha
 
   <p>接下来是广与窄的抉择。诱惑很明显：真空这么大，何不一口气占住「日本艺术」甚至「东方艺术」的大词？证据泼了冷水。<a class="ent" data-url="https://www.hawaii.edu/news/2022/05/13/gizmodo-wirecutter-founder-speaks-at-uh/">Wirecutter</a> 从几样 3C 产品做到全品类，<a class="ent" data-url="https://ahrefs.com/blog/healthline-seo-case-study/">Healthline</a> 靠一个疾病一个主题群打成健康内容巨头——成功的内容权威几乎都从窄处起家。一开始就铺开的 <a class="ent" data-url="https://www.forbes.com/sites/natalierobehmed/2013/09/06/why-artsy-is-succeeding-in-putting-the-art-world-online/">Artsy</a> 呢？它靠的是巨额融资加五百家顶级画廊供料，这个起手式复制不起。AI 检索时代的<a class="ent" data-url="https://growganic.io/geo">量化研究</a>更直接：网域权重只解释不到 4% 的引用差异，七成七被 AI 引用的页面来自小网站，真正的门槛是一个主题至少八到十二篇互连的深度内容。小而深，赢过大而浅。别忘了 e-yakimono.net——一个人的窄站，25 年后还被 AI 引用着。</p>
 
-  <p>那窄要窄在哪里？研究把四个候选切口摊开来评分，加上一个混合方案：品牌用「日本艺术／东方艺术」的大框架，深度先砸在两个旗舰——当代日本陶艺（W1，Jason 的主场）和日本艺术投资（W4，付费意愿最强的客群）。</p>
+  <p>那窄要窄在哪里？研究把四个候选切口摊开来评分，加上一个混合方案：品牌用「日本艺术／东方艺术」的大框架，深度先砸在两个旗舰——当代日本陶艺（W1，发起人自己最深的品类）和日本艺术投资（W4，付费意愿最强的客群）。</p>
 
   <figure class="viz">
     <p class="viz-title">四个切口与混合方案的评分矩阵</p>
-    <p class="viz-sub">1–5 分，5 为最优 · 「切入空间」分数愈高代表现有引用竞争愈少 · 需求栏多为推估<span style="white-space:nowrap">（未查证）</span></p>
+    <p class="viz-sub">1–5 分，5 为最优 · 「切入空间」分数愈高代表现有引用竞争愈少 · 「创办人适配」以深耕陶艺的发起人为基准 · 需求栏多为推估<span style="white-space:nowrap">（未查证）</span></p>
     <div class="tablewrap">
     <table class="heat">
       <thead>
@@ -497,7 +497,7 @@ footer.colophon{margin-top:90px; padding-top:26px; border-top:1px solid var(--ha
 
   <p>收数据的法律红线要先画好。日本著作权法不保护「事实」——成交价、日期、尺寸这些字段可以合法整理——但拍卖行的<a class="ent" data-url="https://www.sbiartauction.co.jp/pdf/en/terms/terms_of_use-en.pdf">网站条款</a>明文禁止爬虫。前车之鉴血淋淋：Christie's 曾<a class="ent" data-url="https://www.artforum.com/news/artprice-files-complaint-against-christies-193635/">控告 Artprice</a> 完整重制两千三百份拍卖目录，Heritage Auctions 则告了 Christie's 子公司 <a class="ent" data-url="https://www.nbcdfw.com/news/local/auction-houses-face-off-in-website-data-scraping-lawsuit/2033762/">Collectrium</a> 爬走近三百万笔拍品数据转售。安全的路是人工或半人工摘取事实字段、自建结构、标明出处——慢，但走得远。至于更诱人的捷径：交易保证、托管、代币化，全部属于「数据与团队成熟前不碰」的清单<span class="unverified">部分属结构推演・未查证</span>。</p>
 
-  <p>回到开头那个旧金山的收藏者。五年后他站在同一件青瓷前面，拿出手机，这次查得到了：艺术家的谱系、作品的评鉴、近三年的成交纪录，三个问题一页答完。而签在那套评鉴方法上的名字，是一个从体系内走出来的台湾陶艺家。米其林出现之前，没有人知道哪家餐厅值得绕路。之后的一百年，全世界跟着它的星星旅行。</p>
+  <p>回到开头那个旧金山的收藏者。五年后他站在同一件青瓷前面，拿出手机，这次查得到了：艺术家的谱系、作品的评鉴、近三年的成交纪录，三个问题一页答完。而签在那套评鉴方法上的，是一个从体系内走出来、经得起查证的名字。米其林出现之前，没有人知道哪家餐厅值得绕路。之后的一百年，全世界跟着它的星星旅行。</p>
 </section>
 
 <!-- ================= 附录 ================= -->
@@ -1094,6 +1094,10 @@ footer.colophon{margin-top:90px; padding-top:26px; border-top:1px solid var(--ha
   var btnCardView = document.getElementById('btnCardView');
   var HINT_IFRAME = '多数网站不允许被内嵌预览——若下方空白或出现错误页，请改用上方「复制网址」或「开新分页 ↗」。';
   var HINT_CARD = '尝试加载原网页中——若该网站拒绝被内嵌，会停留在导览卡；「开新分页 ↗」可直达原文。';
+  var HINT_NOEMBED = '此阅读环境不支持内嵌网页预览——「复制网址」可分享，「开新分页 ↗」直达原文。';
+  // 内嵌预览只在自家域名或本机测试时尝试。在 claude.ai Artifact 等宿主环境里，
+  // 对外部网址设 iframe src 会被宿主拦截成「Open external link」确认窗口，所以一律停留在导览卡。
+  var canEmbed = /(^|\.)bekhelpme\.com$|^localhost$|^127\.|^$/.test(location.hostname);
   var cards = {};
   try{ cards = JSON.parse(document.getElementById('linkCards').textContent); }catch(e){}
 
@@ -1122,8 +1126,12 @@ footer.colophon{margin-top:90px; padding-top:26px; border-top:1px solid var(--ha
       linkCard.classList.remove('show');
       stageHint.textContent = HINT_IFRAME;
     }
-    // 一律尝试加载原网页；iframe 仅在确认加载后才显示，被拒绝时卡片／提示留在原位
-    frame.src = url;
+    // 只在允许内嵌的环境尝试加载原网页；iframe 仅在确认加载后才显示，被拒绝时卡片／提示留在原位
+    if(canEmbed){
+      frame.src = url;
+    } else {
+      stageHint.textContent = HINT_NOEMBED;
+    }
     backdrop.classList.add('open');
     backdrop.setAttribute('aria-hidden','false');
     document.body.style.overflow = 'hidden';
