@@ -14,5 +14,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.7,
     },
+    {
+      url: "https://www.bekhelpme.com/bek-ai-os",
+      lastModified: new Date("2026-07-23"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: "https://www.bekhelpme.com/truth-brain",
+      lastModified: new Date("2026-07-23"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
   ];
 }
